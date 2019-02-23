@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.classm.system.dao.OrderDao">
+
+	<select id="get" resultType="com.classm.system.domain.OrderDO">
+		select `id`,`order_id`,`user_id`,`goods_id`,`rent_start_day`,`rent_end_day`,`daily_fee`,`service_fee`,`total_fee`,`pay_type`,`pay_status`,`audit_status` from t_order where id = #{value}
+	</select>
+
+	<select id="list" resultType="com.classm.system.domain.OrderDO">
+		select `id`,`order_id`,`user_id`,`goods_id`,`rent_start_day`,`rent_end_day`,`daily_fee`,`service_fee`,`total_fee`,`pay_type`,`pay_status`,`audit_status` from t_order
+        <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="orderId != null and orderId != ''"> and order_id = #{orderId} </if>
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="goodsId != null and goodsId != ''"> and goods_id = #{goodsId} </if>
+		  		  <if test="rentStartDay != null and rentStartDay != ''"> and rent_start_day = #{rentStartDay} </if>
+		  		  <if test="rentEndDay != null and rentEndDay != ''"> and rent_end_day = #{rentEndDay} </if>
+		  		  <if test="dailyFee != null and dailyFee != ''"> and daily_fee = #{dailyFee} </if>
+		  		  <if test="serviceFee != null and serviceFee != ''"> and service_fee = #{serviceFee} </if>
+		  		  <if test="totalFee != null and totalFee != ''"> and total_fee = #{totalFee} </if>
+		  		  <if test="payType != null and payType != ''"> and pay_type = #{payType} </if>
+		  		  <if test="payStatus != null and payStatus != ''"> and pay_status = #{payStatus} </if>
+		  		  <if test="auditStatus != null and auditStatus != ''"> and audit_status = #{auditStatus} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from t_order
+		 <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="orderId != null and orderId != ''"> and order_id = #{orderId} </if>
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="goodsId != null and goodsId != ''"> and goods_id = #{goodsId} </if>
+		  		  <if test="rentStartDay != null and rentStartDay != ''"> and rent_start_day = #{rentStartDay} </if>
+		  		  <if test="rentEndDay != null and rentEndDay != ''"> and rent_end_day = #{rentEndDay} </if>
+		  		  <if test="dailyFee != null and dailyFee != ''"> and daily_fee = #{dailyFee} </if>
+		  		  <if test="serviceFee != null and serviceFee != ''"> and service_fee = #{serviceFee} </if>
+		  		  <if test="totalFee != null and totalFee != ''"> and total_fee = #{totalFee} </if>
+		  		  <if test="payType != null and payType != ''"> and pay_type = #{payType} </if>
+		  		  <if test="payStatus != null and payStatus != ''"> and pay_status = #{payStatus} </if>
+		  		  <if test="auditStatus != null and auditStatus != ''"> and audit_status = #{auditStatus} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.classm.system.domain.OrderDO" useGeneratedKeys="true" keyProperty="id">
+		insert into t_order
+		(
+			`order_id`, 
+			`user_id`, 
+			`goods_id`, 
+			`rent_start_day`, 
+			`rent_end_day`, 
+			`daily_fee`, 
+			`service_fee`, 
+			`total_fee`, 
+			`pay_type`, 
+			`pay_status`, 
+			`audit_status`
+		)
+		values
+		(
+			#{orderId}, 
+			#{userId}, 
+			#{goodsId}, 
+			#{rentStartDay}, 
+			#{rentEndDay}, 
+			#{dailyFee}, 
+			#{serviceFee}, 
+			#{totalFee}, 
+			#{payType}, 
+			#{payStatus}, 
+			#{auditStatus}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.classm.system.domain.OrderDO">
+		update t_order 
+		<set>
+			<if test="orderId != null">`order_id` = #{orderId}, </if>
+			<if test="userId != null">`user_id` = #{userId}, </if>
+			<if test="goodsId != null">`goods_id` = #{goodsId}, </if>
+			<if test="rentStartDay != null">`rent_start_day` = #{rentStartDay}, </if>
+			<if test="rentEndDay != null">`rent_end_day` = #{rentEndDay}, </if>
+			<if test="dailyFee != null">`daily_fee` = #{dailyFee}, </if>
+			<if test="serviceFee != null">`service_fee` = #{serviceFee}, </if>
+			<if test="totalFee != null">`total_fee` = #{totalFee}, </if>
+			<if test="payType != null">`pay_type` = #{payType}, </if>
+			<if test="payStatus != null">`pay_status` = #{payStatus}, </if>
+			<if test="auditStatus != null">`audit_status` = #{auditStatus}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="remove">
+		delete from t_order where id = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from t_order where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

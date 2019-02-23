@@ -34,7 +34,7 @@ public class OrderDO implements Serializable {
 	//总费用
 	private Float totalFee;
 	//支付类型
-	private Integer payType;
+	private String payType;
 	//支付状态0: unpay; 1:paying; 99: paied
 	private Integer payStatus;
 	//审核状态：0:unaudit; 99: audited
@@ -151,13 +151,13 @@ public class OrderDO implements Serializable {
 	/**
 	 * 设置：支付类型
 	 */
-	public void setPayType(Integer payType) {
+	public void setPayType(String payType) {
 		this.payType = payType;
 	}
 	/**
 	 * 获取：支付类型
 	 */
-	public Integer getPayType() {
+	public String getPayType() {
 		return payType;
 	}
 	/**

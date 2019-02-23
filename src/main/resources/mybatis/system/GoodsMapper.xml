@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.classm.system.dao.GoodsDao">
+
+	<select id="get" resultType="com.classm.system.domain.GoodsDO">
+		select `id`,`goods_id`,`name`,`type_name`,`type`,`rentalCost`,`deposit`,`desc`,`addr`,`owner` from t_goods where id = #{value}
+	</select>
+
+	<select id="list" resultType="com.classm.system.domain.GoodsDO">
+		select `id`,`goods_id`,`name`,`type_name`,`type`,`rentalCost`,`deposit`,`desc`,`addr`,`owner` from t_goods
+        <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="goodsId != null and goodsId != ''"> and goods_id = #{goodsId} </if>
+		  		  <if test="name != null and name != ''"> and name = #{name} </if>
+		  		  <if test="typeName != null and typeName != ''"> and type_name = #{typeName} </if>
+		  		  <if test="type != null and type != ''"> and type = #{type} </if>
+		  		  <if test="rentalcost != null and rentalcost != ''"> and rentalCost = #{rentalcost} </if>
+		  		  <if test="deposit != null and deposit != ''"> and deposit = #{deposit} </if>
+		  		  <if test="desc != null and desc != ''"> and desc = #{desc} </if>
+		  		  <if test="addr != null and addr != ''"> and addr = #{addr} </if>
+		  		  <if test="owner != null and owner != ''"> and owner = #{owner} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from t_goods
+		 <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="goodsId != null and goodsId != ''"> and goods_id = #{goodsId} </if>
+		  		  <if test="name != null and name != ''"> and name = #{name} </if>
+		  		  <if test="typeName != null and typeName != ''"> and type_name = #{typeName} </if>
+		  		  <if test="type != null and type != ''"> and type = #{type} </if>
+		  		  <if test="rentalcost != null and rentalcost != ''"> and rentalCost = #{rentalcost} </if>
+		  		  <if test="deposit != null and deposit != ''"> and deposit = #{deposit} </if>
+		  		  <if test="desc != null and desc != ''"> and desc = #{desc} </if>
+		  		  <if test="addr != null and addr != ''"> and addr = #{addr} </if>
+		  		  <if test="owner != null and owner != ''"> and owner = #{owner} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.classm.system.domain.GoodsDO" useGeneratedKeys="true" keyProperty="id">
+		insert into t_goods
+		(
+			`goods_id`, 
+			`name`, 
+			`type_name`, 
+			`type`, 
+			`rentalCost`, 
+			`deposit`, 
+			`desc`, 
+			`addr`, 
+			`owner`
+		)
+		values
+		(
+			#{goodsId}, 
+			#{name}, 
+			#{typeName}, 
+			#{type}, 
+			#{rentalcost}, 
+			#{deposit}, 
+			#{desc}, 
+			#{addr}, 
+			#{owner}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.classm.system.domain.GoodsDO">
+		update t_goods 
+		<set>
+			<if test="goodsId != null">`goods_id` = #{goodsId}, </if>
+			<if test="name != null">`name` = #{name}, </if>
+			<if test="typeName != null">`type_name` = #{typeName}, </if>
+			<if test="type != null">`type` = #{type}, </if>
+			<if test="rentalcost != null">`rentalCost` = #{rentalcost}, </if>
+			<if test="deposit != null">`deposit` = #{deposit}, </if>
+			<if test="desc != null">`desc` = #{desc}, </if>
+			<if test="addr != null">`addr` = #{addr}, </if>
+			<if test="owner != null">`owner` = #{owner}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="remove">
+		delete from t_goods where id = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from t_goods where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>
