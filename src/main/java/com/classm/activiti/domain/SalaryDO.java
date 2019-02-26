@@ -65,7 +65,7 @@ public class SalaryDO extends  TaskDO implements Serializable  {
 	//更新时间
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date updateDate;
-	//备注信息
+	//remark Info
 	private String remarks;
 	//删除标记
 	private String delFlag;
@@ -347,13 +347,13 @@ public class SalaryDO extends  TaskDO implements Serializable  {
 		return updateDate;
 	}
 	/**
-	 * 设置：备注信息
+	 * 设置：remark Info
 	 */
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
 	/**
-	 * 获取：备注信息
+	 * 获取：remark Info
 	 */
 	public String getRemarks() {
 		return remarks;

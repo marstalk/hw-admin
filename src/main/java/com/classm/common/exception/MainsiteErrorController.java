@@ -47,7 +47,7 @@ public class MainsiteErrorController implements ErrorController {
         if (404 == code) {
             return R.error(404, "未找到资源");
         } else if (403 == code) {
-            return R.error(403, "没有访问权限");
+            return R.error(403, "没有访问Permission");
         } else if (401 == code) {
             return R.error(403, "登录过期");
         } else {

@@ -8,7 +8,7 @@ function load() {
 			.bootstrapTable(
 					{
 						method : 'get', // 服务器数据的请求方式 get or post
-						url : prefix + "/list", // 服务器数据的加载地址
+						url : prefix + "/list", // 服务器数据的加载link
 						striped : true, // 设置为true会有隔行变色效果
 						dataType : "json", // 服务器返回的数据类型
 						pagination : true, // 设置为true会在底部显示分页条
@@ -26,7 +26,7 @@ function load() {
 						sidePagination : "client", // 设置在哪里进行分页，可选值为"client" 或者
 						// "server"
 						// queryParams : queryParams,
-						// //请求服务器数据时，你可以通过重写参数的方式添加一些额外的参数，例如 toolbar 中的参数 如果
+						// //请求服务器数据时，你可以通过重写参数的方式添加一些额外的参数，e.g. toolbar 中的参数 如果
 						// queryParamsType = 'limit' ,返回参数必须包含
 						// limit, offset, search, sort, order 否则, 需要包含:
 						// pageSize, pageNumber, searchText, sortName,
@@ -44,25 +44,25 @@ function load() {
 								},
 								{
 									field : 'roleName',
-									title : '角色名'
+									title : 'Role Name'
 								},
 								{
 									field : 'remark',
-									title : '备注'
+									title : 'remark '
 								},
 								{
 									field : '',
-									title : '权限'
+									title : 'Permission'
 								},
 								{
-									title : '操作',
+									title : 'Operation',
 									field : 'roleId',
 									align : 'center',
 									formatter : function(value, row, index) {
-										var e = '<a class="btn btn-primary btn-sm '+s_edit_h+'" href="#" mce_href="#" title="编辑" onclick="edit(\''
+										var e = '<a class="btn btn-primary btn-sm '+s_edit_h+'" href="#" mce_href="#" title="Edit" onclick="edit(\''
 												+ row.roleId
 												+ '\')"><i class="fa fa-edit"></i></a> ';
-										var d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''
+										var d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="Del"  mce_href="#" onclick="remove(\''
 												+ row.roleId
 												+ '\')"><i class="fa fa-remove"></i></a> ';
 										return e + d;
@@ -85,8 +85,8 @@ function add() {
 	});
 }
 function remove(id) {
-	layer.confirm('确定要删除选中的记录？', {
-		btn : [ '确定', '取消' ]
+	layer.confirm('sure to delete the selectd records？', {
+		btn : [ 'Yes', 'No' ]
 	}, function() {
 		$.ajax({
 			url : prefix + "/remove",
@@ -96,7 +96,7 @@ function remove(id) {
 			},
 			success : function(r) {
 				if (r.code === 0) {
-					layer.msg("删除成功");
+					layer.msg("delete successfully");
 					reLoad();
 				} else {
 					layer.msg(r.msg);
@@ -120,11 +120,11 @@ function batchRemove() {
 	
 	var rows = $('#exampleTable').bootstrapTable('getSelections'); // 返回所有选择的行，当没有选择的记录时，返回一个空数组
 	if (rows.length == 0) {
-		layer.msg("请选择要删除的数据");
+		layer.msg("Please select what you wanna delete");
 		return;
 	}
-	layer.confirm("确认要删除选中的'" + rows.length + "'条数据吗?", {
-		btn : [ '确定', '取消' ]
+	layer.confirm("Are you sure to delete '" + rows.length + "'rocords?", {
+		btn : [ 'Yes', 'No' ]
 	}, function() {
 		var ids = new Array();
 		$.each(rows, function(i, row) {

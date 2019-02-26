@@ -37,7 +37,7 @@ public interface UserService {
 	Tree<DeptDO> getTree();
 
 	/**
-	 * 更新个人信息
+	 * 更新个人Info
 	 * @param userDO
 	 * @return
 	 */
@@ -46,7 +46,7 @@ public interface UserService {
 	/**
 	 * 更新个人图片
 	 * @param file 图片
-	 * @param avatar_data 裁剪信息
+	 * @param avatar_data 裁剪Info
 	 * @param userId 用户ID
 	 * @throws Exception
 	 */

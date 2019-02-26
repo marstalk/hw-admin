@@ -34,7 +34,7 @@ function update() {
 		},
 		success : function(data) {
 			if (data.code == 0) {
-				parent.layer.msg("保存成功");
+				parent.layer.msg("save successfully");
 				parent.reLoad();
 				var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
 				parent.layer.close(index);
@@ -60,10 +60,10 @@ function validate() {
 		},
 		messages : {
 			name : {
-				required : icon + "请输入菜单名"
+				required : icon + "please enter menu name"
 			},
 			type : {
-				required : icon + "请选择菜单类型"
+				required : icon + "请选择menu类型"
 			}
 		}
 	})
@@ -81,10 +81,10 @@ function validateRule() {
 		},
 		messages : {
 			name : {
-				required : icon + "请输入菜单名"
+				required : icon + "please enter menu name"
 			},
 			type : {
-				required : icon + "请选择菜单类型"
+				required : icon + "请选择menu类型"
 			}
 		}
 	})

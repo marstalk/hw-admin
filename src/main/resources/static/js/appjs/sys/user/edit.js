@@ -92,7 +92,7 @@ function validateRule() {
 		messages : {
 
 			name : {
-				required : icon + "请输入姓名"
+				required : icon + "Please enter valid value"
 			},
 			username : {
 				required : icon + "请输入您的用户名",

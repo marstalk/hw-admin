@@ -568,7 +568,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
     thisData[index][config.checkName] = checked;
   };
   
-  //同步全选按钮状态
+  //同步全选button状态
   Class.prototype.syncCheckAll = function(){
     var that = this
     ,config = that.config

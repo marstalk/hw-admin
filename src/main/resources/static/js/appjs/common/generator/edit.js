@@ -5,7 +5,7 @@ $().ready(function() {
 
 $.validator.setDefaults({
 	submitHandler : function() {
-		console.log('提交修改');
+		console.log('Submit修改');
 		update();
 	}
 });
@@ -17,7 +17,7 @@ function update() {
 		data : $('#signupForm').serialize(),// 你的formid
 		async : false,
 		error : function(request) {
-			parent.layer.alert("网络连接超时");
+			parent.layer.msg("网络连接超时");
 		},
 		success : function(data) {
 			if (data.code == 0) {

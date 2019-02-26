@@ -41,7 +41,7 @@ $(document).ready(function () {
         return false;
     });
 
-    //固定菜单栏
+    //固定menu栏
     $(function () {
         $('.sidebar-collapse').slimScroll({
             height: '100%',
@@ -51,7 +51,7 @@ $(document).ready(function () {
     });
 
 
-    // 菜单切换
+    // menu切换
     $('.navbar-minimalize').click(function () {
         $("body").toggleClass("mini-navbar");
         SmoothlyMenu();
@@ -137,7 +137,7 @@ function SmoothlyMenu() {
 //主题设置
 $(function () {
 
-    // 顶部菜单固定
+    // 顶部menu固定
     $('#fixednavbar').click(function () {
         if ($('#fixednavbar').is(':checked')) {
             $(".navbar-static-top").removeClass('navbar-static-top').addClass('navbar-fixed-top');
@@ -163,7 +163,7 @@ $(function () {
     });
 
 
-    // 收起左侧菜单
+    // 收起左侧menu
     $('#collapsemenu').click(function () {
         if ($('#collapsemenu').is(':checked')) {
             $("body").addClass('mini-navbar');

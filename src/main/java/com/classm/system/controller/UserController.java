@@ -164,7 +164,7 @@ public class UserController extends BaseController {
 		return prefix + "/reset_pwd";
 	}
 
-	@Log("提交更改用户密码")
+	@Log("Submit更改用户密码")
 	@PostMapping("/resetPwd")
 	@ResponseBody
 	R resetPwd(UserVO userVO) {
@@ -180,7 +180,7 @@ public class UserController extends BaseController {
 
 	}
 	@RequiresPermissions("sys:user:resetPwd")
-	@Log("admin提交更改用户密码")
+	@Log("adminSubmit更改用户密码")
 	@PostMapping("/adminResetPwd")
 	@ResponseBody
 	R adminResetPwd(UserVO userVO) {

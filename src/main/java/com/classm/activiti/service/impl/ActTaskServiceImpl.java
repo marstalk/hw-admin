@@ -58,11 +58,11 @@ public class ActTaskServiceImpl implements ActTaskService {
     }
 
     /**
-     * 提交任务, 并保存意见
+     * Submit任务, 并保存意见
      *
      * @param taskId    任务ID
-     * @param procInsId 流程实例ID，如果为空，则不保存任务提交意见
-     * @param comment   任务提交意见的内容
+     * @param procInsId 流程实例ID，如果为空，则不保存任务Submit意见
+     * @param comment   任务Submit意见的内容
      * @param title     流程标题，显示在待办任务标题
      * @param vars      任务变量
      */
@@ -83,7 +83,7 @@ public class ActTaskServiceImpl implements ActTaskService {
             vars.put("title", title);
         }
 
-        // 提交任务
+        // Submit任务
         taskService.complete(taskId, vars);
     }
 
@@ -94,7 +94,7 @@ public class ActTaskServiceImpl implements ActTaskService {
                 .taskId(taskId).singleResult();
         // 获取流程实例ID
         String processInstance = task.getProcessInstanceId();
-        // 2.2根据流程实例ID，人物ID，评论的消息，保存教师或者学术对与该学生申请的评论信息
+        // 2.2根据流程实例ID，人物ID，评论的消息，保存教师或者学术对与该学生申请的评论Info
 //        taskService.addComment(taskId,
 //                processInstance, "");
 //        Map<String,Object> vars = new HashMap<>();
@@ -236,7 +236,7 @@ public class ActTaskServiceImpl implements ActTaskService {
         for (int i = 0; i < historicActivityInstances.size() - 1; i++) {// 对历史流程节点进行遍历
             ActivityImpl activityImpl = processDefinitionEntity
                     .findActivity(historicActivityInstances.get(i)
-                            .getActivityId());// 得到节点定义的详细信息
+                            .getActivityId());// 得到节点定义的详细Info
             List<ActivityImpl> sameStartTimeNodes = new ArrayList<ActivityImpl>();// 用以保存后需开始时间相同的节点
             ActivityImpl sameActivityImpl1 = processDefinitionEntity
                     .findActivity(historicActivityInstances.get(i + 1)

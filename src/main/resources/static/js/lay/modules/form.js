@@ -398,7 +398,7 @@ layui.define('layer', function(exports){
     return that;
   };
   
-  //表单提交校验
+  //表单Submit校验
   var submit = function(){
     var button = $(this), verify = form.config.verify, stop = null
     ,DANGER = 'layui-form-danger', field = {} ,elem = button.parents(ELEM)
@@ -461,7 +461,7 @@ layui.define('layer', function(exports){
     }, 50);
   });
   
-  //表单提交事件
+  //表单Submit事件
   dom.on('submit', ELEM, submit)
   .on('click', '*[lay-submit]', submit);
   

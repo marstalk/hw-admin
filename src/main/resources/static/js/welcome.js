@@ -1,4 +1,4 @@
-//欢迎信息
+//欢迎Info
 
 layer.config({
     extend: ['extend/layer.ext.js', 'skin/moon/style.css'],
@@ -31,7 +31,7 @@ layer.ready(function () {
             type: 1,
             area: ['700px', 'auto'],
             content: html,
-            btn: ['确定', '取消']
+            btn: ['Yes', '取消']
         });
     }
 

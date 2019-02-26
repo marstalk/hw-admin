@@ -6,8 +6,8 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>hw-admin</title>
-    <meta name="keywords" content="hw-admin管理系统">
-    <meta name="description" content="hw-admin管理系统">
+    <meta name="keywords" content="hw-admin">
+    <meta name="description" content="hw-admin">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/font-awesome.css?v=4.4.0" rel="stylesheet">
     <link href="/css/animate.css" rel="stylesheet">
@@ -34,32 +34,32 @@
                 </div>
                 <div class="m-b"></div>
                 <h3>
-                    欢迎使用 <strong>hw-admin管理系统</strong>
+                    Welcome to <strong>hw-admin </strong>
                 </h3>
             </div>
         </div>
         <div class="col-sm-5">
             <form id="signupForm">
-                <h3 class="text-center">用户登录</h3>
-                <p class="m-t-md text-center">欢迎登录hw后台管理系统</p>
+                <h3 class="text-center">Sign-in</h3>
+                <p class="m-t-md text-center"></p>
                 <input type="text" name="username" class="form-control uname"
                        th:value="${username}"/>
                 <input type="password" name="password"
                        class="form-control pword m-b" th:value="${password}"/>
-                <a id="login" class="btn btn-login btn-block">登录</a>
+                <a id="login" class="btn btn-login btn-block">Sign-in</a>
                 <div class="row">
                     <div class="col-xs-6 pull_left">
                         <div class="form-group">
-                            <input class="form-control" type="tel" name="verify" id="verify" placeholder="请输入验证码" maxlength="4">
+                            <input class="form-control" type="tel" name="verify" id="verify" placeholder="code" maxlength="4">
                         </div>
                     </div>
                     <div class="col-xs-6 pull_left">
-                        <a href="javascript:void(0);" rel="external nofollow" title="点击更换验证码">
-                            <img style="margin-top: 12px;" id="imgVerify" src="" alt="更换验证码" height="36" width="100%" onclick="getVerify(this);">
+                        <a href="javascript:void(0);" rel="external nofollow" title="click to refresh">
+                            <img style="margin-top: 12px;" id="imgVerify" src="" alt="Change code" height="36" width="100%" onclick="getVerify(this);">
                         </a>
                     </div>
                 </div>
-                <!--按钮模块-->
+                <!--button模块-->
             </form>
         </div>
     </div>
@@ -138,10 +138,10 @@
             },
             messages: {
                 username: {
-                    required: icon + "请输入您的用户名",
+                    required: icon + "Please enter your name",
                 },
                 password: {
-                    required: icon + "请输入您的密码",
+                    required: icon + "Please enter you password",
                 }
             }
         })

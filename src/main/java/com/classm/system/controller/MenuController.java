@@ -40,20 +40,20 @@ public class MenuController extends BaseController {
 		return menus;
 	}
 
-	@Log("添加菜单")
+	@Log("添加menu")
 	@RequiresPermissions("sys:menu:add")
 	@GetMapping("/add/{pId}")
 	String add(Model model, @PathVariable("pId") Long pId) {
 		model.addAttribute("pId", pId);
 		if (pId == 0) {
-			model.addAttribute("pName", "根目录");
+			model.addAttribute("pName", "根directory");
 		} else {
 			model.addAttribute("pName", menuService.get(pId).getName());
 		}
 		return prefix + "/add";
 	}
 
-	@Log("编辑菜单")
+	@Log("编辑menu")
 	@RequiresPermissions("sys:menu:edit")
 	@GetMapping("/edit/{id}")
 	String edit(Model model, @PathVariable("id") Long id) {
@@ -61,7 +61,7 @@ public class MenuController extends BaseController {
 		Long pId = mdo.getParentId();
 		model.addAttribute("pId", pId);
 		if (pId == 0) {
-			model.addAttribute("pName", "根目录");
+			model.addAttribute("pName", "根directory");
 		} else {
 			model.addAttribute("pName", menuService.get(pId).getName());
 		}
@@ -69,7 +69,7 @@ public class MenuController extends BaseController {
 		return prefix+"/edit";
 	}
 
-	@Log("保存菜单")
+	@Log("保存menu")
 	@RequiresPermissions("sys:menu:add")
 	@PostMapping("/save")
 	@ResponseBody
@@ -84,7 +84,7 @@ public class MenuController extends BaseController {
 		}
 	}
 
-	@Log("更新菜单")
+	@Log("更新menu")
 	@RequiresPermissions("sys:menu:edit")
 	@PostMapping("/update")
 	@ResponseBody
@@ -99,7 +99,7 @@ public class MenuController extends BaseController {
 		}
 	}
 
-	@Log("删除菜单")
+	@Log("删除menu")
 	@RequiresPermissions("sys:menu:remove")
 	@PostMapping("/remove")
 	@ResponseBody

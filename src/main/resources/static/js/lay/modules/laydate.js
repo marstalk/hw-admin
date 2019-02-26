@@ -372,12 +372,12 @@
     ,trigger: 'focus' //呼出控件的事件
     ,show: false //是否直接显示，如果设置true，则默认直接显示控件
     ,showBottom: true //是否显示底部栏
-    ,btns: ['clear', 'now', 'confirm'] //右下角显示的按钮，会按照数组顺序排列
+    ,btns: ['clear', 'now', 'confirm'] //右下角显示的button，会按照数组顺序排列
     ,lang: 'cn' //语言，只支持cn/en，即中文和英文
     ,theme: 'default' //主题
     ,position: null //控件定位方式定位, 默认absolute，支持：fixed/absolute/static
     ,calendar: false //是否开启公历重要节日，仅支持中文版
-    ,mark: {} //日期备注，如重要事件或活动标记
+    ,mark: {} //日期remark ，如重要事件或活动标记
     ,zIndex: null //控件层叠顺序
     ,done: null //控件选择完毕后的回调，点击清空/现在/确定也均会触发
     ,change: null //日期时间改变后的回调
@@ -397,7 +397,7 @@
         ,dateTips: '返回日期'
         ,month: ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二']
         ,tools: {
-          confirm: '确定'
+          confirm: 'OK'
           ,clear: '清空'
           ,now: '现在'
         }
@@ -936,7 +936,7 @@
     return that;
   };
   
-  //公历重要日期与自定义备注
+  //公历重要日期与自定义remark
   Class.prototype.mark = function(td, YMD){
     var that = this
     ,mark, options = that.config;
@@ -1067,7 +1067,7 @@
             ,[that.endDate.year, that.endDate.month + 1]
           ];  
           that.list(options.type, 0).list(options.type, 1);
-          //同步按钮可点状态
+          //同步button可点状态
           options.type === 'time' ? that.setBtnStatus('时间'
             ,lay.extend({}, that.systemDate(), that.startTime)
             ,lay.extend({}, that.systemDate(), that.endTime)
@@ -1089,7 +1089,7 @@
       }));
     }
     
-    //通过检测当前有效日期，来设定确定按钮是否可点
+    //通过检测当前有效日期，来设定确定button是否可点
     if(!options.range) that.limit(lay(that.footer).find(ELEM_CONFIRM), null, 0, ['hours', 'minutes', 'seconds']);
     
     //标记选择范围
@@ -1250,7 +1250,7 @@
           that.closeList();
         }
 
-        that.setBtnStatus(); //同步按钮可点状态
+        that.setBtnStatus(); //同步button可点状态
         options.range || that.done(null, 'change');
         lay(that.footer).find(ELEM_TIME_BTN).removeClass(DISABLED);
       });
@@ -1296,7 +1296,7 @@
           scroll();
           (that.endDate || options.type === 'time') && that.done(null, 'change');
           
-          //同步按钮可点状态
+          //同步button可点状态
           that.setBtnStatus();
         });
       });
@@ -1331,7 +1331,7 @@
       end = end || that.endDate;
       isOut = that.newDate(start).getTime() > that.newDate(end).getTime();
       
-      //如果不在有效日期内，直接禁用按钮，否则比较开始和结束日期
+      //如果不在有效日期内，直接禁用button，否则比较开始和结束日期
       (that.limit(null, start) || that.limit(null, end)) 
         ? elemBtn.addClass(DISABLED)
       : elemBtn[isOut ? 'addClass' : 'removeClass'](DISABLED);
@@ -1559,7 +1559,7 @@
     }
   };
   
-  //底部按钮
+  //底部button
   Class.prototype.tool = function(btn, type){
     var that = this
     ,options = that.config
@@ -1756,7 +1756,7 @@
       });
     });
     
-    //点击底部按钮
+    //点击底部button
     lay(that.footer).find('span').on('click', function(){
       var type = lay(this).attr('lay-type');
       that.tool(this, type);

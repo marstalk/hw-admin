@@ -93,7 +93,7 @@ layui.define(['layer-mobile', 'zepto'] , function(exports){
     });
   };
   
-  //提交上传
+  //Submit上传
   Upload.prototype.action = function(input, type){
     var that = this, options = that.options, val = input.value;
     var item = $(input), ext = item.attr('lay-ext') || options.ext || ''; //获取支持上传的文件扩展名;

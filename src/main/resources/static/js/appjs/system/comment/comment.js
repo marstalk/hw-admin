@@ -9,7 +9,7 @@ function load() {
 			.bootstrapTable(
 					{
 						method : 'get', // 服务器数据的请求方式 get or post
-						url : prefix + "/list", // 服务器数据的加载地址
+						url : prefix + "/list", // 服务器数据的加载link
 					//	showRefresh : true,
 					//	showToggle : true,
 					//	showColumns : true,
@@ -37,7 +37,7 @@ function load() {
 					           // username:$('#searchName').val()
 							};
 						},
-						// //请求服务器数据时，你可以通过重写参数的方式添加一些额外的参数，例如 toolbar 中的参数 如果
+						// //请求服务器数据时，你可以通过重写参数的方式添加一些额外的参数，e.g. toolbar 中的参数 如果
 						// queryParamsType = 'limit' ,返回参数必须包含
 						// limit, offset, search, sort, order 否则, 需要包含:
 						// pageSize, pageNumber, searchText, sortName,
@@ -49,37 +49,37 @@ function load() {
 								},
 																{
 									field : 'id', 
-									title : 'id' 
+									title : 'ID' 
 								},
 																{
 									field : 'userId', 
-									title : '用户ID' 
+									title : 'User ID' 
 								},
 																{
 									field : 'userName', 
-									title : '用户名字' 
+									title : 'User Name' 
 								},
 																{
 									field : 'goodsId', 
-									title : '商品ID' 
+									title : 'Goods ID' 
 								},
 																{
 									field : 'comment', 
-									title : '评论详情' 
+									title : 'Comment' 
 								},
 																{
 									field : 'cdate',
-									title : '评论日期' 
+									title : 'Comment Date' 
 								},
 																{
-									title : '操作',
+									title : 'Operation',
 									field : 'id',
 									align : 'center',
 									formatter : function(value, row, index) {
-										var e = '<a class="btn btn-primary btn-sm '+s_edit_h+'" href="#" mce_href="#" title="编辑" onclick="edit(\''
+										var e = '<a class="btn btn-primary btn-sm '+s_edit_h+'" href="#" mce_href="#" title="Edit" onclick="edit(\''
 												+ row.id
 												+ '\')"><i class="fa fa-edit"></i></a> ';
-										var d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''
+										var d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="Del"  mce_href="#" onclick="remove(\''
 												+ row.id
 												+ '\')"><i class="fa fa-remove"></i></a> ';
 										var f = '<a class="btn btn-success btn-sm" href="#" title="备用"  mce_href="#" onclick="resetPwd(\''
@@ -96,7 +96,7 @@ function reLoad() {
 function add() {
 	layer.open({
 		type : 2,
-		title : '增加',
+		title : 'New',
 		maxmin : true,
 		shadeClose : false, // 点击遮罩关闭层
 		area : [ '800px', '520px' ],
@@ -106,7 +106,7 @@ function add() {
 function edit(id) {
 	layer.open({
 		type : 2,
-		title : '编辑',
+		title : 'Edit',
 		maxmin : true,
 		shadeClose : false, // 点击遮罩关闭层
 		area : [ '800px', '520px' ],
@@ -114,8 +114,8 @@ function edit(id) {
 	});
 }
 function remove(id) {
-	layer.confirm('确定要删除选中的记录？', {
-		btn : [ '确定', '取消' ]
+	layer.confirm('sure to delete the selectd records？', {
+		btn : [ 'Yes', 'No' ]
 	}, function() {
 		$.ajax({
 			url : prefix+"/remove",
@@ -140,12 +140,12 @@ function resetPwd(id) {
 function batchRemove() {
 	var rows = $('#exampleTable').bootstrapTable('getSelections'); // 返回所有选择的行，当没有选择的记录时，返回一个空数组
 	if (rows.length == 0) {
-		layer.msg("请选择要删除的数据");
+		layer.msg("Please select what you wanna delete");
 		return;
 	}
-	layer.confirm("确认要删除选中的'" + rows.length + "'条数据吗?", {
-		btn : [ '确定', '取消' ]
-	// 按钮
+	layer.confirm("Are you sure to delete '" + rows.length + "'rocords?", {
+		btn : [ 'Yes', 'No' ]
+	// button
 	}, function() {
 		var ids = new Array();
 		// 遍历所有选择的行数据，取每条数据对应的ID

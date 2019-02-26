@@ -22,7 +22,7 @@
     this.v = '2.1.5'; //版本号
   }
 
-  //获取layui所在目录
+  //获取layui所在directory
   ,getPath = function(){
     var js = doc.scripts
     ,jsPath = js[js.length - 1].src;
@@ -55,7 +55,7 @@
     ,code: 'modules/code' //代码修饰器
     ,jquery: 'modules/jquery' //DOM库（第三方）
     
-    ,mobile: 'modules/mobile' //移动大模块 | 若当前为开发目录，则为移动模块入口，否则为移动模块集合
+    ,mobile: 'modules/mobile' //移动大模块 | 若当前为开发directory，则为移动模块入口，否则为移动模块集合
     ,'layui.all': '../layui.all' //PC模块合并版
   };
 
@@ -336,7 +336,7 @@
     return settings.key ? data[settings.key] : data;
   };
 
-  //设备信息
+  //设备Info
   Layui.prototype.device = function(key){
     var agent = navigator.userAgent.toLowerCase()
 

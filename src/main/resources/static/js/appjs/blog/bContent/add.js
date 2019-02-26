@@ -29,7 +29,7 @@ function save(status) {
 		data : $('#signupForm').serialize(),// 你的formid
 		async : false,
 		error : function(request) {
-			parent.layer.alert("Connection error");
+			parent.layer.msg("Connection error");
 		},
 		success : function(r) {
 			if (r.code == 0) {
@@ -38,7 +38,7 @@ function save(status) {
 				$("#cid").val(r.cid);
 
 			} else {
-				parent.layer.alert(r.msg)
+				parent.layer.msg(r.msg)
 			}
 		}
 	});

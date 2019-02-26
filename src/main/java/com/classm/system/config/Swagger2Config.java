@@ -32,7 +32,7 @@ public class Swagger2Config {
                 .build();
     }
 
-    //构建 api文档的详细信息函数
+    //构建 api文档的详细Info函数
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题

@@ -19,17 +19,17 @@ function save() {
         contentType: false,
         processData: false,
 		error : function(request) {
-			parent.layer.alert("Connection error");
+			parent.layer.msg("Connection error");
 		},
 		success : function(data) {
 			if (data.code == 0) {
-				parent.layer.msg("操作成功");
+				parent.layer.msg("Success");
 				parent.reLoad();
 				var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
 				parent.layer.close(index);
 
 			} else {
-				parent.layer.alert("操作失败")
+				parent.layer.msg("操作失败")
 			}
 
 		}
@@ -79,7 +79,7 @@ function validateRule() {
 		messages : {
 
 			name : {
-				required : icon + "请输入姓名"
+				required : icon + "Please enter valid value"
 			},
 			username : {
 				required : icon + "请输入您的用户名",

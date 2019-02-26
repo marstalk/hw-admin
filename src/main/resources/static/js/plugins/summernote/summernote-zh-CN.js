@@ -22,7 +22,7 @@
         floatNone: '不浮动',
         dragImageHere: '将图片拖至此处',
         selectFromFiles: '从本地上传',
-        url: '图片地址'
+        url: '图片link'
       },
       link: {
         link: '链接',
@@ -30,14 +30,14 @@
         unlink: '去除链接',
         edit: '编辑链接',
         textToDisplay: '显示文本',
-        url: '链接地址',
+        url: '链接link',
         openInNewWindow: '在新窗口打开'
       },
       video: {
         video: '视频',
         videoLink: '视频链接',
         insert: '插入视频',
-        url: '视频地址',
+        url: '视频link',
         providers: '(优酷, Instagram, DailyMotion, Youtube等)'
       },
       table: {

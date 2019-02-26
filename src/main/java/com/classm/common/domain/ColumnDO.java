@@ -10,7 +10,7 @@ public class ColumnDO {
 	private String columnName;
 	// 列名类型
 	private String dataType;
-	// 列名备注
+	// 列名remark
 	private String comments;
 
 	// 属性名称(第一个字母大写)，如：user_name => UserName

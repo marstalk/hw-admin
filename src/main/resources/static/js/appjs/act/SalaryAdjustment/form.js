@@ -20,13 +20,13 @@ function save() {
 		},
 		success : function(data) {
 			if (data.code == 0) {
-				parent.layer.msg("保存成功");
+				parent.layer.msg("save successfully");
 				parent.reLoad();
 				var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
 				parent.layer.close(index);
 
 			} else {
-				parent.layer.alert(data.msg)
+				parent.layer.msg(data.msg)
 			}
 		}
 	});
@@ -41,7 +41,7 @@ function validateRule() {
 		},
 		messages : {
 			name : {
-				required : icon + "请输入姓名"
+				required : icon + "Please enter valid value"
 			}
 		}
 	})

@@ -32,16 +32,16 @@ function save(status) {
 		data : $('#signupForm').serialize(),// 你的formid
 		async : false,
 		error : function(request) {
-			parent.layer.alert("Connection error");
+			parent.layer.msg("Connection error");
 		},
 		success : function(data) {
 			if (data.code == 0) {
-				parent.layer.msg("操作成功");
+				parent.layer.msg("Success");
 				parent.reLoad();
 				
 
 			} else {
-				parent.layer.alert(data.msg)
+				parent.layer.msg(data.msg)
 			}
 
 		}
@@ -58,7 +58,7 @@ function validateRule() {
 		},
 		messages : {
 			name : {
-				required : icon + "请输入姓名"
+				required : icon + "Please enter valid value"
 			}
 		}
 	})

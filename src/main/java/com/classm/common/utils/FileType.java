@@ -5,7 +5,7 @@ package com.classm.common.utils;
  * 功能：根据文件名称判断类型
  * 接受参数类型：String 
  * 返回参数类型：String
- * 备注：文件类型不完善，有需要的自行添加
+ * remark ：文件类型不完善，有需要的自行添加
  */
 public class FileType {
 	public static int fileType(String fileName) {

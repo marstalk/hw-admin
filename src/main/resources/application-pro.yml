@@ -12,7 +12,7 @@ spring:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/hw?useUnicode=true&characterEncoding=utf8
     username: root
-    password: root
+    password: uAiqwVwjJ8-i
     initialSize: 1
     minIdle: 3
     maxActive: 20

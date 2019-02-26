@@ -35,7 +35,7 @@
                     type: this.method, //请求数据的ajax类型
                     url: this.url,   //请求数据的ajax的url
                     ajaxParams: this.data, //请求数据的ajax的data属性
-                    expandColumn: this.expandColumn,//在哪一列上面显示展开按钮,从0开始
+                    expandColumn: this.expandColumn,//在哪一列上面显示展开button,从0开始
                     striped: true,   //是否各行渐变色
                     expandAll: this.expandAll,  //是否全部展开
                     columns: this.columns,		//列数组
@@ -46,7 +46,7 @@
         },
 
         /**
-         * 设置在哪一列上面显示展开按钮,从0开始
+         * 设置在哪一列上面显示展开button,从0开始
          */
         setExpandColumn: function (expandColumn) {
             this.expandColumn = expandColumn;

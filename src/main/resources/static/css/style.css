@@ -490,7 +490,7 @@ body.body-small.fixed-sidebar.mini-navbar .navbar-static-side {
 /*border-radius: 2px;*/
 /*}*/
 
-/*伸缩菜单*/
+/*伸缩menu*/
 .fixed-sidebar.mini-navbar .nav li:hover>a> span.nav-label {
     top: 0px;
     padding: 10px 10px 10px 10px;
@@ -513,7 +513,7 @@ body.body-small.fixed-sidebar.mini-navbar .navbar-static-side {
     min-width: 140px;
     border-radius: 2px;
 }
-/*伸缩菜单结束*/
+/*伸缩menu结束*/
 
 body.fixed-sidebar.mini-navbar .navbar-default .nav>li>.nav-second-level li a {
     font-size: 12px;
@@ -7357,7 +7357,7 @@ body.skin-3 {
     padding:0;
 }
 
-/*编辑器按钮样式冲突*/
+/*编辑器button样式冲突*/
 .note-editor .btn-default {
     color: #333333!important;
     background-color: #ffffff!important;

@@ -245,14 +245,14 @@
         type : "GET", // 请求数据的ajax类型
         url : null, // 请求数据的ajax的url
         ajaxParams : {}, // 请求数据的ajax的data属性
-        expandColumn : null,// 在哪一列上面显示展开按钮
+        expandColumn : null,// 在哪一列上面显示展开button
         expandAll : true, // 是否全部展开
         striped : false, // 是否各行渐变色
         columns : [],
         toolbar: null,//顶部工具条
         height: 0,
-        expanderExpandedClass : 'glyphicon glyphicon-chevron-down',// 展开的按钮的图标
-        expanderCollapsedClass : 'glyphicon glyphicon-chevron-right'// 缩起的按钮的图标
+        expanderExpandedClass : 'glyphicon glyphicon-chevron-down',// 展开的button的图标
+        expanderCollapsedClass : 'glyphicon glyphicon-chevron-right'// 缩起的button的图标
 
     };
 })(jQuery);

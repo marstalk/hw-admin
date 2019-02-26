@@ -61,7 +61,7 @@ layui.define('layer' , function(exports){
     ,exts: '' //允许上传的文件后缀名
     ,auto: true //是否选完文件后自动上传
     ,bindAction: '' //手动上传触发的元素
-    ,url: '' //上传地址
+    ,url: '' //上传link
     ,field: 'file' //文件字段名
     ,method: 'post' //请求上传的http类型
     ,data: {} //请求上传的额外参数
@@ -155,7 +155,7 @@ layui.define('layer' , function(exports){
     return elem.tagName.toLocaleLowerCase() === 'input' && elem.type === 'file'
   }
   
-  //预读图片信息
+  //预读图片Info
   Class.prototype.preview = function(callback){
     var that = this;
     if(window.FileReader){
@@ -211,14 +211,14 @@ layui.define('layer' , function(exports){
     
       that.elemFile.parent().submit();
 
-      //获取响应信息
+      //获取响应Info
       clearInterval(Class.timer);
       Class.timer = setInterval(function() {
         var res, iframeBody = iframe.contents().find('body');
         try {
           res = iframeBody.text();
         } catch(e) {
-          that.msg('获取上传后的响应信息出现异常');
+          that.msg('获取上传后的响应Info出现异常');
           clearInterval(Class.timer);
           error();
         }
@@ -285,7 +285,7 @@ layui.define('layer' , function(exports){
       }
     }
     
-    //提交上传
+    //Submit上传
     ,send = function(){
       if(type === 'choose'){
         return options.choose && options.choose(args);

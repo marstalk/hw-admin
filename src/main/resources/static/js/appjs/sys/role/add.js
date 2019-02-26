@@ -59,7 +59,7 @@ function save() {
 		},
 		success : function(data) {
 			if (data.code == 0) {
-				parent.layer.msg("操作成功");
+				parent.layer.msg("Success");
 				parent.reLoad();
 				var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
 
@@ -82,7 +82,7 @@ function validateRule() {
 		},
 		messages : {
 			roleName : {
-				required : icon + "请输入角色名"
+				required : icon + "please enter role name
 			}
 		}
 	});

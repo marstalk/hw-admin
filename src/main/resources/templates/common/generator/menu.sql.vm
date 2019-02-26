@@ -1,11 +1,11 @@
--- 菜单SQL
+-- menuSQL
 INSERT INTO `sys_menu` (`parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`)
     VALUES ('1', '${comments}', 'modules/generator/${pathName}.html', NULL, '1', 'fa fa-file-code-o', '6');
 
--- 按钮父菜单ID
+-- button父menuID
 set @parentId = @@identity;
 
--- 菜单对应按钮SQL
+-- menu对应buttonSQL
 INSERT INTO `sys_menu` (`parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`)
     SELECT @parentId, '查看', null, '${pathName}:list,${pathName}:info', '2', null, '6';
 INSERT INTO `sys_menu` (`parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`)

@@ -17,7 +17,7 @@ public class FileDO implements Serializable {
     private Long id;
     // 文件类型
     private Integer type;
-    // URL地址
+    // URLlink
     private String url;
     // 创建时间
     private Date createDate;
@@ -65,14 +65,14 @@ public class FileDO implements Serializable {
     }
 
     /**
-     * 设置：URL地址
+     * 设置：URLlink
      */
     public void setUrl(String url) {
         this.url = url;
     }
 
     /**
-     * 获取：URL地址
+     * 获取：URLlink
      */
     public String getUrl() {
         return url;

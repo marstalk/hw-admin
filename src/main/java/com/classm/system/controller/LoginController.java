@@ -43,7 +43,7 @@ public class LoginController extends BaseController {
         return "redirect:/login";
     }
 
-    @Log("请求访问主页")
+    @Log("request index")
     @GetMapping({"/index"})
     String index(Model model) {
         List<Tree<MenuDO>> menus = menuService.listMenuTree(getUserId());
@@ -70,7 +70,7 @@ public class LoginController extends BaseController {
         return "login";
     }
 
-    @Log("登录")
+    @Log("sign-in")
     @PostMapping("/login")
     @ResponseBody
     R ajaxLogin(String username, String password,String verify,HttpServletRequest request) {
@@ -79,15 +79,15 @@ public class LoginController extends BaseController {
             //从session中获取随机数
             String random = (String) request.getSession().getAttribute(RandomValidateCodeUtil.RANDOMCODEKEY);
             if (StringUtils.isBlank(verify)) {
-                return R.error("请输入验证码");
+                return R.error("Please enter your code");
             }
             if (random.equals(verify)) {
             } else {
-                return R.error("请输入正确的验证码");
+                return R.error("Please enter right code");
             }
         } catch (Exception e) {
-            logger.error("验证码校验失败", e);
-            return R.error("验证码校验失败");
+            logger.error("code verify fail", e);
+            return R.error("code verify fail");
         }
         password = MD5Utils.encrypt(username, password);
         UsernamePasswordToken token = new UsernamePasswordToken(username, password);
@@ -96,7 +96,7 @@ public class LoginController extends BaseController {
             subject.login(token);
             return R.ok();
         } catch (AuthenticationException e) {
-            return R.error("用户或密码错误");
+            return R.error("user name or password is invalid");
         }
     }
 
@@ -118,13 +118,13 @@ public class LoginController extends BaseController {
     public void getVerify(HttpServletRequest request, HttpServletResponse response) {
         try {
             response.setContentType("image/jpeg");//设置相应类型,告诉浏览器输出的内容为图片
-            response.setHeader("Pragma", "No-cache");//设置响应头信息，告诉浏览器不要缓存此内容
+            response.setHeader("Pragma", "No-cache");//设置响应头Info，告诉浏览器不要缓存此内容
             response.setHeader("Cache-Control", "no-cache");
             response.setDateHeader("Expire", 0);
             RandomValidateCodeUtil randomValidateCode = new RandomValidateCodeUtil();
             randomValidateCode.getRandcode(request, response);//输出验证码图片方法
         } catch (Exception e) {
-            logger.error("获取验证码失败>>>> ", e);
+            logger.error("fail to get code>>>> ", e);
         }
     }
 

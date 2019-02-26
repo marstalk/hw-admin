@@ -12,7 +12,7 @@ import java.util.List;
 public class TableDO {
     //表的名称
     private String tableName;
-    //表的备注
+    //表的remark
     private String comments;
     //表的主键
     private ColumnDO pk;

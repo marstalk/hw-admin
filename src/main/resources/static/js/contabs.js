@@ -98,7 +98,7 @@ $(function () {
         }
     }
 
-    //通过遍历给菜单项加上data-index属性
+    //通过遍历给menu项加上data-index属性
     $(".J_menuItem").each(function (index) {
         if (!$(this).attr('data-index')) {
             $(this).attr('data-index', index);
@@ -113,7 +113,7 @@ $(function () {
             flag = true;
         if (dataUrl == undefined || $.trim(dataUrl).length == 0)return false;
 
-        // 选项卡菜单已存在
+        // 选项卡menu已存在
         $('.J_menuTab').each(function () {
             if ($(this).data('id') == dataUrl) {
                 if (!$(this).hasClass('active')) {
@@ -132,7 +132,7 @@ $(function () {
             }
         });
 
-        // 选项卡菜单不存在
+        // 选项卡menu不存在
         if (flag) {
             var str = '<a href="javascript:;" class="active J_menuTab" data-id="' + dataUrl + '">' + menuName + ' <i class="fa fa-times-circle"></i></a>';
             $('.J_menuTab').removeClass('active');
@@ -157,7 +157,7 @@ $(function () {
 
     $('.J_menuItem').on('click', menuItem);
 
-    // 关闭选项卡菜单
+    // 关闭选项卡menu
     function closeTab() {
         var closeTabId = $(this).parents('.J_menuTab').data('id');
         var currentWidth = $(this).parents('.J_menuTab').width();
@@ -256,7 +256,7 @@ $(function () {
     $('.J_tabShowActive').on('click', showActiveTab);
 
 
-    // 点击选项卡菜单
+    // 点击选项卡menu
     function activeTab() {
         if (!$(this).hasClass('active')) {
             var currentId = $(this).data('id');

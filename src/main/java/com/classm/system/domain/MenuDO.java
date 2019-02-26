@@ -7,17 +7,17 @@ public class MenuDO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	//
 	private Long menuId;
-	// 父菜单ID，一级菜单为0
+	// 父menuID，一级menu为0
 	private Long parentId;
-	// 菜单名称
+	// menu名称
 	private String name;
-	// 菜单URL
+	// menuURL
 	private String url;
 	// 授权(多个用逗号分隔，如：user:list,user:create)
 	private String perms;
-	// 类型 0：目录 1：菜单 2：按钮
+	// 类型 0：directory 1：menu 2：button
 	private Integer type;
-	// 菜单图标
+	// menu图标
 	private String icon;
 	// 排序
 	private Integer orderNum;
@@ -41,42 +41,42 @@ public class MenuDO implements Serializable {
 	}
 
 	/**
-	 * 设置：父菜单ID，一级菜单为0
+	 * 设置：父menuID，一级menu为0
 	 */
 	public void setParentId(Long parentId) {
 		this.parentId = parentId;
 	}
 
 	/**
-	 * 获取：父菜单ID，一级菜单为0
+	 * 获取：父menuID，一级menu为0
 	 */
 	public Long getParentId() {
 		return parentId;
 	}
 
 	/**
-	 * 设置：菜单名称
+	 * 设置：menu名称
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
 	/**
-	 * 获取：菜单名称
+	 * 获取：menu名称
 	 */
 	public String getName() {
 		return name;
 	}
 
 	/**
-	 * 设置：菜单URL
+	 * 设置：menuURL
 	 */
 	public void setUrl(String url) {
 		this.url = url;
 	}
 
 	/**
-	 * 获取：菜单URL
+	 * 获取：menuURL
 	 */
 	public String getUrl() {
 		return url;
@@ -97,28 +97,28 @@ public class MenuDO implements Serializable {
 	}
 
 	/**
-	 * 设置：类型 0：目录 1：菜单 2：按钮
+	 * 设置：类型 0：directory 1：menu 2：button
 	 */
 	public void setType(Integer type) {
 		this.type = type;
 	}
 
 	/**
-	 * 获取：类型 0：目录 1：菜单 2：按钮
+	 * 获取：类型 0：directory 1：menu 2：button
 	 */
 	public Integer getType() {
 		return type;
 	}
 
 	/**
-	 * 设置：菜单图标
+	 * 设置：menu图标
 	 */
 	public void setIcon(String icon) {
 		this.icon = icon;
 	}
 
 	/**
-	 * 获取：菜单图标
+	 * 获取：menu图标
 	 */
 	public String getIcon() {
 		return icon;

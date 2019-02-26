@@ -55,7 +55,7 @@ public class JobController extends BaseController{
 	}
 
 	/**
-	 * 信息
+	 * Info
 	 */
 	@RequestMapping("/info/{id}")
 	public R info(@PathVariable("id") Long id) {

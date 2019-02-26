@@ -59,7 +59,7 @@ $.jgrid.regional["cn"] = {
     edit : {
         addCaption: "添加记录",
         editCaption: "编辑记录",
-        bSubmit: "提交",
+        bSubmit: "Submit",
         bCancel: "取消",
         bClose: "关闭",
         saveData: "数据已改变，是否保存？",
@@ -71,7 +71,7 @@ $.jgrid.regional["cn"] = {
             number:"请输入有效数字",
             minValue:"输值必须大于等于 ",
             maxValue:"输值必须小于等于 ",
-            email: "这不是有效的e-mail地址",
+            email: "这不是有效的e-maillink",
             integer: "请输入有效整数",
             date: "请输入有效时间",
             url: "无效网址。前缀必须为 ('http://' 或 'https://')",
@@ -86,9 +86,9 @@ $.jgrid.regional["cn"] = {
         bClose: "关闭"
     },
     del : {
-        caption: "删除",
+        caption: "Del",
         msg: "删除所选记录？",
-        bSubmit: "删除",
+        bSubmit: "Del",
         bCancel: "取消"
     },
     nav : {

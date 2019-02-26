@@ -67,7 +67,7 @@ public class ModelController extends BaseController{
 
         //初始化一个空模型
         Model model = repositoryService.newModel();
-        //设置一些默认信息
+        //设置一些默认Info
         String name = "new-process";
         String description = "";
         int revision = 1;

@@ -229,7 +229,7 @@ layui.define(function(exports){
       });
     }
     
-    //确定
+    //Yes
     if(btn){
       laypage.on(btn, 'click', function(){
         skip();

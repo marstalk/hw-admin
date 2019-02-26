@@ -592,7 +592,7 @@ $(function () {
                indicator : [
                    { text: '销售', max: 6000},
                    { text: '管理', max: 16000},
-                   { text: '信息技术', max: 30000},
+                   { text: 'Info技术', max: 30000},
                    { text: '客服', max: 38000},
                    { text: '研发', max: 52000},
                    { text: '市场', max: 25000}

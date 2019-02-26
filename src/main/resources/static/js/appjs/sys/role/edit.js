@@ -78,7 +78,7 @@ function validateRule() {
 		},
 		messages : {
 			roleName : {
-				required : icon + "请输入角色名"
+				required : icon + "please enter role name"
 			}
 		}
 	});

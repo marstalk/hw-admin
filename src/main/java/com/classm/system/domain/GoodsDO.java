@@ -31,7 +31,7 @@ public class GoodsDO implements Serializable {
 	private Float deposit;
 	//描述
 	private String desc;
-	//交易地址
+	//交易link
 	private String addr;
 	//商品所有者ID
 	private Integer owner;
@@ -133,13 +133,13 @@ public class GoodsDO implements Serializable {
 		return desc;
 	}
 	/**
-	 * 设置：交易地址
+	 * 设置：交易link
 	 */
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
 	/**
-	 * 获取：交易地址
+	 * 获取：交易link
 	 */
 	public String getAddr() {
 		return addr;

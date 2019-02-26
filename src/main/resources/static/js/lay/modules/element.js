@@ -191,7 +191,7 @@ layui.define('jquery', function(exports){
       
       layui.event.call(this, MOD_NAME, 'nav('+ filter +')', othis);
     }
-    //点击子菜单选中
+    //点击子menu选中
     ,clickChild: function(){
       var othis = $(this), parents = othis.parents(NAV_ELEM)
       ,filter = parents.attr('lay-filter');
@@ -199,7 +199,7 @@ layui.define('jquery', function(exports){
       othis.addClass(THIS);
       layui.event.call(this, MOD_NAME, 'nav('+ filter +')', othis);
     }
-    //展开二级菜单
+    //展开二级menu
     ,showChild: function(){
       var othis = $(this), parents = othis.parents(NAV_ELEM);
       var parent = othis.parent(), child = othis.siblings('.'+NAV_CHILD);
@@ -242,7 +242,7 @@ layui.define('jquery', function(exports){
         call.tabAuto.call({});
       }
       
-      //导航菜单
+      //导航menu
       ,nav: function(){
         var TIME = 200, timer = {}, timerMore = {}, timeEnd = {}, follow = function(bar, nav, index){
           var othis = $(this), child = othis.find('.'+NAV_CHILD);
@@ -320,15 +320,15 @@ layui.define('jquery', function(exports){
           itemElem.each(function(){
             var oitem = $(this), child = oitem.find('.'+NAV_CHILD);
             
-            //二级菜单
+            //二级menu
             if(child[0] && !oitem.find('.'+NAV_MORE)[0]){
               var one = oitem.children('a');
               one.append('<span class="'+ NAV_MORE +'"></span>');
             }
             
             oitem.off('click', call.clickThis).on('click', call.clickThis); //点击选中
-            oitem.children('a').off('click', call.showChild).on('click', call.showChild); //展开二级菜单
-            child.children('dd').off('click', call.clickChild).on('click', call.clickChild); //点击子菜单选中
+            oitem.children('a').off('click', call.showChild).on('click', call.showChild); //展开二级menu
+            child.children('dd').off('click', call.clickChild).on('click', call.clickChild); //点击子menu选中
           });
         });
       }

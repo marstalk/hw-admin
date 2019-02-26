@@ -17,7 +17,7 @@ public class UserOnline {
     private String username;
 
     /**
-     * 用户主机地址
+     * 用户主机link
      */
     private String host;
 

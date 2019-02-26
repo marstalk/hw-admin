@@ -68,7 +68,7 @@ public class FileController extends BaseController {
 	}
 
 	/**
-	 * 信息
+	 * Info
 	 */
 	@RequestMapping("/info/{id}")
 	@RequiresPermissions("common:info")

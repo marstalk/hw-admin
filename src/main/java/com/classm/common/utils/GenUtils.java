@@ -53,9 +53,9 @@ public class GenUtils {
 
     public static void generatorCode(Map<String, String> table,
                                      List<Map<String, String>> columns, ZipOutputStream zip) {
-        //配置信息
+        //配置Info
         Configuration config = getConfig();
-        //表信息
+        //表Info
         TableDO tableDO = new TableDO();
         tableDO.setTableName(table.get("tableName"));
         tableDO.setComments(table.get("tableComment"));
@@ -64,7 +64,7 @@ public class GenUtils {
         tableDO.setClassName(className);
         tableDO.setClassname(StringUtils.uncapitalize(className));
 
-        //列信息
+        //列Info
         List<ColumnDO> columsList = new ArrayList<>();
         for (Map<String, String> column : columns) {
             ColumnDO columnDO = new ColumnDO();
@@ -159,7 +159,7 @@ public class GenUtils {
     }
 
     /**
-     * 获取配置信息
+     * 获取配置Info
      */
     public static Configuration getConfig() {
         try {

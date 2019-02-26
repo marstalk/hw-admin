@@ -31,7 +31,7 @@
                     <div>
                         <span><img alt="image" class="img-circle" height="60" width="60" th:src="${picUrl}"/></span>
                         <h3 class="" style="color: #ffffff">
-                            </i>后台管理系统
+                            </i>Admin System
                         </h3>
                     </div>
                     <div class="dropdown profile-element hidden">
@@ -40,42 +40,42 @@
                             <span class="clear">
                             <span class="block m-t-xs"><strong class="font-bold"
                                                                th:text="${username}">admin</strong></span>
-                            <span class="text-muted text-xs block">超级管理员<b class="caret"></b></span>
+                            <span class="text-muted text-xs block">Super Administrator<b class="caret"></b></span>
                              </span>
                         </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a @click="personal" href="#">修改头像</a>
+                            <li><a @click="personal" href="#">update profile</a>
                             </li>
-                            <li><a @click="personal" href="#">个人资料</a>
+                            <li><a @click="personal" href="#">personal Info</a>
                             </li>
-                            <li><a @click="personal" href="#">密码修改</a>
+                            <li><a @click="personal" href="#">update password</a>
                             </li>
-                            <li><a @click="personal" href="#">信箱</a>
+                            <li><a @click="personal" href="#">email</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="/logout">安全退出</a>
+                            <li><a href="/logout">exit</a>
                             </li>
                         </ul>
-                        <div class="logo-element">BootDo</div>
+                        <div class="logo-element">HW</div>
                     </div>
                 </li>
                 <li><a href="#"> <i class="fa fa-home"></i> <span
-                        class="nav-label">主页</span> <span class="fa arrow"></span>
+                        class="nav-label">Index</span> <span class="fa arrow"></span>
                 </a>
                     <ul class="nav nav-second-level">
                         <li><a id="index001" class="J_menuItem" href="index_v1.html"
-                               data-index="0" th:href="@{/main}">了解BootDo</a></li>
+                               data-index="0" th:href="@{/main}">About HW</a></li>
                     </ul>
                 </li>
                 <li th:each="menu : ${menus}"><a href="#"> <i
                         class="fa fa fa-bar-chart-o" th:class="${menu.attributes.icon}"></i>
-                    <span class="nav-label" th:text="${menu.text}">基础信息</span> <span
+                    <span class="nav-label" th:text="${menu.text}">Basi Info</span> <span
                             class="fa arrow"></span>
                 </a>
                     <ul class="nav nav-second-level">
                         <li th:each="cmenu : ${menu.children}"><a class="J_menuItem" href="graph_echarts.html"
                                                                   th:text="${cmenu.text}"
-                                                                  th:href="${cmenu.attributes.url}">系统管理</a></li>
+                                                                  th:href="${cmenu.attributes.url}">Admin System</a></li>
                     </ul>
                 </li>
             </ul>
@@ -90,48 +90,44 @@
                 <div class="navbar-header">
 
                     <a class="navbar-minimalize minimalize-styl-2 btn btn-default "
-                       href="#" title="收起菜单"><i class="fa fa-bars"></i> </a>
+                       href="#" title="收起menu"><i class="fa fa-bars"></i> </a>
                     <form role="search" class="navbar-form-custom"
                           method="post" action="">
-                        <div class="form-group">
-                            <input type="text" placeholder="请输入您需要查找的内容 …"
-                                   class="form-control" name="top-search" id="top-search">
-                        </div>
                     </form>
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
-                    <li class="dropdown"><a class="dropdown-toggle count-info"
-                                            data-toggle="dropdown" href="#"> <i class="fa fa-envelope"></i>
-                        <span class="label label-warning">{{total}}</span>通知
-                    </a>
-                        <ul class="dropdown-menu dropdown-messages">
-                            <li v-for="row in rows" class="m-t-xs">
-                                <div class="dropdown-messages-box">
-                                    <a class="pull-left"> <i
-                                            class="fa fa-server"></i>
-                                    </a>
-                                    <div class="media-body">
-                                        <small class="pull-right">{{row.before}}</small>
-                                        <strong>{{row.sender}}</strong>
-                                        {{row.title}} <br>
-                                        <small class="text-muted">{{row.updateDate}}</small>
-                                    </div>
-                                </div>
-                                <div class="divider"></div>
-                            </li>
-                            <li>
-                                <div class="text-center link-block">
-                                    <a class="J_menuItem" href="/oa/notify/selfNotify"> <i
-                                            class="fa fa-envelope"></i> <strong> 查看所有消息</strong>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="hidden-xs"><a @click="personal" href="#" ><i class="fa fa-id-card"></i> 个人</a></li>
+                    <!--<li class="dropdown"><a class="dropdown-toggle count-info"-->
+                                            <!--data-toggle="dropdown" href="#"> <i class="fa fa-envelope"></i>-->
+                        <!--<span class="label label-warning">{{total}}</span>Notification-->
+                    <!--</a>-->
+                        <!--<ul class="dropdown-menu dropdown-messages">-->
+                            <!--<li v-for="row in rows" class="m-t-xs">-->
+                                <!--<div class="dropdown-messages-box">-->
+                                    <!--<a class="pull-left"> <i-->
+                                            <!--class="fa fa-server"></i>-->
+                                    <!--</a>-->
+                                    <!--<div class="media-body">-->
+                                        <!--<small class="pull-right">{{row.before}}</small>-->
+                                        <!--<strong>{{row.sender}}</strong>-->
+                                        <!--{{row.title}} <br>-->
+                                        <!--<small class="text-muted">{{row.updateDate}}</small>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="divider"></div>-->
+                            <!--</li>-->
+                            <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<div class="text-center link-block">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<a class="J_menuItem" href="/oa/notify/selfNotify"> <i&ndash;&gt;-->
+                                            <!--&lt;!&ndash;class="fa fa-envelope"></i> <strong>show All notifications</strong>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <li class="hidden-xs"><a @click="personal" href="#" ><i class="fa fa-id-card"></i> Personal Info</a></li>
                     <li class="dropdown hidden-xs"><a
                             class="right-sidebar-toggle" aria-expanded="false"> <i
-                            class="fa fa-tasks"></i> 主题
+                            class="fa fa-tasks"></i>Theme
                     </a></li>
                 </ul>
             </nav>
@@ -143,7 +139,7 @@
             <nav class="page-tabs J_menuTabs">
                 <div class="page-tabs-content">
                     <a href="javascript:;" class="active J_menuTab"
-                       data-id="index_v1.html">首页</a>
+                       data-id="index_v1.html">Index</a>
                 </div>
             </nav>
             <button class="roll-nav roll-right J_tabRight">
@@ -151,17 +147,17 @@
             </button>
             <div class="btn-group roll-nav roll-right">
                 <button class="dropdown J_tabClose" data-toggle="dropdown">
-                    关闭操作<span class="caret"></span>
+                    Close Tap<span class="caret"></span>
                 </button>
                 <ul role="menu" class="dropdown-menu dropdown-menu-right">
-                    <li class="J_tabShowActive"><a>定位当前选项卡</a></li>
+                    <li class="J_tabShowActive"><a>go to current</a></li>
                     <li class="divider"></li>
-                    <li class="J_tabCloseAll"><a>关闭全部选项卡</a></li>
-                    <li class="J_tabCloseOther"><a>关闭其他选项卡</a></li>
+                    <li class="J_tabCloseAll"><a>close all taps</a></li>
+                    <li class="J_tabCloseOther"><a>close other taps</a></li>
                 </ul>
             </div>
             <a href="/logout" class="roll-nav roll-right J_tabExit"><i
-                    class="fa fa fa-sign-out"></i> 退出</a>
+                    class="fa fa fa-sign-out"></i> Exit</a>
         </div>
         <div class="row J_mainContent" id="content-main">
             <iframe class="J_iframe" name="iframe0" width="100%" height="100%"
@@ -179,25 +175,25 @@
             <ul class="nav nav-tabs navs-3">
 
                 <li class="active"><a data-toggle="tab" href="#tab-1"> <i
-                        class="fa fa-gear"></i> 主题
+                        class="fa fa-gear"></i> Theme
                 </a></li>
-                <li class=""><a data-toggle="tab" href="#tab-2"> 通知 </a></li>
-                <li><a data-toggle="tab" href="#tab-3"> 项目进度 </a></li>
+                <!--<li class=""><a data-toggle="tab" href="#tab-2"> Notification </a></li>-->
+                <!--<li><a data-toggle="tab" href="#tab-3"> Project process </a></li>-->
             </ul>
             <div class="tab-content">
                 <div id="tab-1" class="tab-pane active">
                     <div class="sidebar-title">
                         <h3>
-                            <i class="fa fa-comments-o"></i> 主题设置
+                            <i class="fa fa-comments-o"></i> Theme Setting
                         </h3>
                         <small><i class="fa fa-tim"></i>
-                            你可以从这里选择和预览主题的布局和样式，这些设置会被保存在本地，下次打开的时候会直接应用这些设置。
+                            You can choose any theme and style, this setting will be saved, next time you login, it will keep same.
                         </small>
                     </div>
                     <div class="skin-setttings">
-                        <div class="title">主题设置</div>
+                        <div class="title">Theme setting</div>
                         <div class="setings-item">
-                            <span>收起左侧菜单</span>
+                            <span>collapse</span>
                             <div class="switch">
                                 <div class="onoffswitch">
                                     <input type="checkbox" name="collapsemenu"
@@ -210,7 +206,7 @@
                             </div>
                         </div>
                         <div class="setings-item">
-                            <span>固定顶部</span>
+                            <span>fixed to top</span>
 
                             <div class="switch">
                                 <div class="onoffswitch">
@@ -224,7 +220,7 @@
                             </div>
                         </div>
                         <div class="setings-item">
-                            <span> 固定宽度 </span>
+                            <span> fixed width </span>
                             <div class="switch">
                                 <div class="onoffswitch">
                                     <input type="checkbox" name="boxedlayout"
@@ -236,20 +232,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="title">皮肤选择</div>
+                        <div class="title">skin choose</div>
                         <div class="setings-item default-skin nb">
 								<span class="skin-name "> <a href="#" class="s-skin-0">
-										默认皮肤 </a>
+										default </a>
 								</span>
                         </div>
                         <div class="setings-item blue-skin nb">
 								<span class="skin-name "> <a href="#" class="s-skin-1">
-										蓝色主题 </a>
+										blue </a>
 								</span>
                         </div>
                         <div class="setings-item yellow-skin nb">
 								<span class="skin-name "> <a href="#" class="s-skin-3">
-										黄色/紫色主题 </a>
+										grape </a>
 								</span>
                         </div>
                     </div>
@@ -258,18 +254,16 @@
 
                     <div class="sidebar-title">
                         <h3>
-                            <i class="fa fa-comments-o"></i> 最新通知
+                            <i class="fa fa-comments-o"></i> Latest Notification
                         </h3>
-                        <small><i class="fa fa-tim"></i> 您当前有10条未读信息</small>
                     </div>
                 </div>
                 <div id="tab-3" class="tab-pane">
 
                     <div class="sidebar-title">
                         <h3>
-                            <i class="fa fa-cube"></i> 最新任务
+                            <i class="fa fa-cube"></i>
                         </h3>
-                        <small><i class="fa fa-tim"></i> 您当前有14个任务，10个已完成</small>
                     </div>
                 </div>
             </div>
@@ -308,7 +302,7 @@
         var stomp = Stomp.over(sock);
         stomp.connect('guest', 'guest', function(frame) {
 
-            /**  订阅了/user/queue/notifications 发送的消息,这里雨在控制器的 convertAndSendToUser 定义的地址保持一致, 
+            /**  订阅了/user/queue/notifications 发送的消息,这里雨在控制器的 convertAndSendToUser 定义的link保持一致, 
              *  这里多用了一个/user,并且这个user 是必须的,使用user 才会发送消息到指定的用户。 
              *  */
             stomp.subscribe("/user/queue/notifications", handleNotification);
@@ -353,7 +347,7 @@
             personal: function () {
                 layer.open({
                     type: 2,
-                    title: '个人设置',
+                    title: 'Personal Setting',
                     maxmin: true,
                     shadeClose: false,
                     area: ['800px', '600px'],

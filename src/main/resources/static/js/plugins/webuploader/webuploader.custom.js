@@ -1120,7 +1120,7 @@
             },
 
             /**
-             * 获取文件统计信息。返回一个包含一下信息的对象。
+             * 获取文件统计Info。返回一个包含一下Info的对象。
              * * `successNum` 上传成功的文件数
              * * `progressNum` 上传中的文件数
              * * `cancelNum` 被删除的文件数
@@ -1540,7 +1540,7 @@
     });
 
     /**
-     * @fileOverview 错误信息
+     * @fileOverview 错误Info
      */
     define('lib/filepicker',[
         'base',
@@ -1556,7 +1556,7 @@
             opts.container = $( opts.id );
 
             if ( !opts.container.length ) {
-                throw new Error('按钮指定错误');
+                throw new Error('button指定错误');
             }
 
             opts.innerHTML = opts.innerHTML || opts.label ||
@@ -1927,11 +1927,11 @@
              * @property {Selector | Object} [pick=undefined]
              * @namespace options
              * @for Uploader
-             * @description 指定选择文件的按钮容器，不指定则不创建按钮。
+             * @description 指定选择文件的button容器，不指定则不创建button。
              *
-             * * `id` {Seletor|dom} 指定选择文件的按钮容器，不指定则不创建按钮。**注意** 这里虽然写的是 id, 但是不是只支持 id, 还支持 class, 或者 dom 节点。
+             * * `id` {Seletor|dom} 指定选择文件的button容器，不指定则不创建button。**注意** 这里虽然写的是 id, 但是不是只支持 id, 还支持 class, 或者 dom 节点。
              * * `label` {String} 请采用 `innerHTML` 代替
-             * * `innerHTML` {String} 指定按钮文字。不指定时优先从指定的容器中看是否自带文字。
+             * * `innerHTML` {String} 指定button文字。不指定时优先从指定的容器中看是否自带文字。
              * * `multiple` {Boolean} 是否开起同时选择多个文件能力。
              */
             pick: null,
@@ -1982,7 +1982,7 @@
              * @for Uploader
              * @grammar addButton( pick ) => Promise
              * @description
-             * 添加文件选择按钮，如果一个按钮不够，需要调用此方法来添加。参数跟[options.pick](#WebUploader:Uploader:options)一致。
+             * 添加文件选择button，如果一个button不够，需要调用此方法来添加。参数跟[options.pick](#WebUploader:Uploader:options)一致。
              * @example
              * uploader.addButton({
              *     id: '#btnContainer',
@@ -2081,7 +2081,7 @@
             // 是否裁剪
             crop: false,
 
-            // 是否保留头部信息
+            // 是否保留头部Info
             preserveHeaders: false,
 
             // 是否允许放大。
@@ -2253,7 +2253,7 @@
              *     // 是否允许裁剪。
              *     crop: false,
              *
-             *     // 是否保留头部meta信息。
+             *     // 是否保留头部metaInfo。
              *     preserveHeaders: true,
              *
              *     // 如果发现压缩后文件大小比原来还大，则使用原来图片
@@ -2481,7 +2481,7 @@
          * @class File
          * @constructor 构造函数
          * @grammar new File( source ) => File
-         * @param {Lib.File} source [lib.File](#Lib.File)实例, 此source对象是带有Runtime信息的。
+         * @param {Lib.File} source [lib.File](#Lib.File)实例, 此source对象是带有RuntimeInfo的。
          */
         function WUFile( source ) {
 
@@ -2524,7 +2524,7 @@
             this.id = gid();
 
             /**
-             * 文件扩展名，通过文件名获取，例如test.png的扩展名为png
+             * 文件扩展名，通过文件名获取，e.g.test.png的扩展名为png
              * @property ext
              * @type {string}
              */
@@ -2600,7 +2600,7 @@
             },
 
             /**
-             * 获取文件原始信息。
+             * 获取文件原始Info。
              * @return {*}
              */
             getSource: function() {
@@ -3194,7 +3194,7 @@
 
     });
     /**
-     * @fileOverview 添加获取Runtime相关信息的方法。
+     * @fileOverview 添加获取Runtime相关Info的方法。
      */
     define('widgets/runtime',[
         'uploader',
@@ -3995,7 +3995,7 @@
                 me.remaning++;
 
                 // 如果没有分片，则直接使用原始的。
-                // 不会丢失content-type信息。
+                // 不会丢失content-typeInfo。
                 block.blob = block.chunks === 1 ? file.source :
                         file.source.slice( block.start, block.end );
 
@@ -4231,7 +4231,7 @@
         });
     });
     /**
-     * @fileOverview 日志组件，主要用来收集错误信息，可以帮助 webuploader 更好的定位问题和发展。
+     * @fileOverview 日志组件，主要用来收集错误Info，可以帮助 webuploader 更好的定位问题和发展。
      *
      * 如果您不想要启用此功能，请在打包的时候去掉 log 模块。
      *
@@ -5102,7 +5102,7 @@
                         height: this.height
                     };
 
-                    // 读取meta信息。
+                    // 读取metaInfo。
                     if ( !me._metas && 'image/jpeg' === me.type ) {
                         Util.parseMeta( me._blob, function( error, ret ) {
                             me._metas = ret;

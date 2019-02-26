@@ -8,7 +8,7 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * 菜单管理
+ * menu管理
  * @author
  * @email
  * @date 2017-10-03 09:45:09

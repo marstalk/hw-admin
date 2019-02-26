@@ -10,15 +10,15 @@
 					<div class="fixed-table-toolbar">
 						<div class="columns pull-left">
 							<button shiro:hasPermission="system:comment:add" type="button" class="btn  btn-primary" onclick="add()">
-								<i class="fa fa-plus" aria-hidden="true"></i>添加
+								<i class="fa fa-plus" aria-hidden="true"></i>New
 							</button>
 							<button shiro:hasPermission="system:comment:batchRemove" type="button" class="btn  btn-danger"
 								onclick="batchRemove()">
-								<i class="fa fa-trash" aria-hidden="true"></i>删除
+								<i class="fa fa-trash" aria-hidden="true"></i>Delete
 							</button>
 						</div>
 						<div class="columns pull-right">
-							<button class="btn btn-success" onclick="reLoad()">查询</button>
+							<button class="btn btn-success" onclick="reLoad()">Search</button>
 						</div>
 						<div class="columns pull-right col-md-2 nopadding">
 							<input id="searchName" type="text" class="form-control"
@@ -31,7 +31,7 @@
 			</div>
 		</div>
 	</div>
-	<!--shiro控制bootstraptable行内按钮看见性 来自bootdo的创新方案 -->
+	<!--shiro控制bootstraptable行内button看见性 来自bootdo的创新方案 -->
 		<div>
 			<script type="text/javascript">
 				var s_edit_h = 'hidden';

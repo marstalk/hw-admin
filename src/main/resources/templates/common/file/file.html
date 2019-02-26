@@ -134,7 +134,7 @@
                     itemTexts: function (type, page, current) { //修改显示文字
                         switch (type) {
                             case "first":
-                                return "首页";
+                                return "Index";
                             case "prev":
                                 return "上一页";
                             case "next":
@@ -153,8 +153,8 @@
                 $('#page').bootstrapPaginator(options);
             },
             remove: function (id) {
-                layer.confirm('确定要删除选中的记录？', {
-                    btn: ['确定', '取消']
+                layer.confirm('sure to delete the selectd records？', {
+                    btn: ['Yes', 'No']
                 }, function () {
                     $.ajax({
                         url: "/common/sysFile/remove",

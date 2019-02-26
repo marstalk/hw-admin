@@ -8,7 +8,7 @@ function load() {
 			.bootstrapTable(
 					{
 						method : 'get', // 服务器数据的请求方式 get or post
-						url : prefix + "/list", // 服务器数据的加载地址
+						url : prefix + "/list", // 服务器数据的加载link
 						// showRefresh : true,
 						// showToggle : true,
 						// showColumns : true,
@@ -36,7 +36,7 @@ function load() {
 								name : $('#searchName').val()
 							};
 						},
-						// //请求服务器数据时，你可以通过重写参数的方式添加一些额外的参数，例如 toolbar 中的参数 如果
+						// //请求服务器数据时，你可以通过重写参数的方式添加一些额外的参数，e.g. toolbar 中的参数 如果
 						// queryParamsType = 'limit' ,返回参数必须包含
 						// limit, offset, search, sort, order 否则, 需要包含:
 						// pageSize, pageNumber, searchText, sortName,
@@ -83,11 +83,11 @@ function load() {
 									}
 								},
 								{
-									title : '操作',
+									title : 'Operation',
 									field : 'id',
 									align : 'center',
 									formatter : function(value, row, index) {
-										var d = '<a class="btn btn-warning btn-sm" href="#" title="删除"  mce_href="#" onclick="forceLogout(\''
+										var d = '<a class="btn btn-warning btn-sm" href="#" title="Del"  mce_href="#" onclick="forceLogout(\''
 												+ row.id
 												+ '\')"><i class="fa fa-remove"></i></a> ';
 										return d;
@@ -111,7 +111,7 @@ function add() {
 }
 function forceLogout(id) {
 	layer.confirm('确定要强制选中用户下线吗？', {
-		btn : [ '确定', '取消' ]
+		btn : [ 'Yes', 'No' ]
 	}, function() {
 		$.ajax({
 			url : prefix+"/forceLogout/" + id,
@@ -153,12 +153,12 @@ function resetPwd(id) {
 function batchRemove() {
 	var rows = $('#exampleTable').bootstrapTable('getSelections'); // 返回所有选择的行，当没有选择的记录时，返回一个空数组
 	if (rows.length == 0) {
-		layer.msg("请选择要删除的数据");
+		layer.msg("Please select what you wanna delete");
 		return;
 	}
-	layer.confirm("确认要删除选中的'" + rows.length + "'条数据吗?", {
-		btn : [ '确定', '取消' ]
-	// 按钮
+	layer.confirm("Are you sure to delete '" + rows.length + "'rocords?", {
+		btn : [ 'Yes', 'No' ]
+	// button
 	}, function() {
 		var ids = new Array();
 		// 遍历所有选择的行数据，取每条数据对应的ID

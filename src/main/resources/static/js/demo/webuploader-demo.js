@@ -7,13 +7,13 @@ jQuery(function() {
         $queue = $('<ul class="filelist"></ul>')
             .appendTo( $wrap.find('.queueList') ),
 
-        // 状态栏，包括进度和控制按钮
+        // 状态栏，包括进度和控制button
         $statusBar = $wrap.find('.statusBar'),
 
-        // 文件总体选择信息。
+        // 文件总体选择Info。
         $info = $statusBar.find('.info'),
 
-        // 上传按钮
+        // 上传button
         $upload = $wrap.find('.uploadBtn'),
 
         // 没选择文件之前的内容。
@@ -38,7 +38,7 @@ jQuery(function() {
         // 可能有pedding, ready, uploading, confirm, done.
         state = 'pedding',
 
-        // 所有文件的进度信息，key为file id
+        // 所有文件的进度Info，key为file id
         percentages = {},
 
         supportTransition = (function(){
@@ -88,7 +88,7 @@ jQuery(function() {
         fileSingleSizeLimit: 1 * 1024 * 1024    // 50 M
     });
 
-    // 添加“添加文件”的按钮，
+    // 添加“添加文件”的button，
     uploader.addButton({
         id: '#filePicker2',
         label: '继续添加'

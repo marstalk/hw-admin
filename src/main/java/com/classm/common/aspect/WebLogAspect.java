@@ -18,7 +18,7 @@ public class WebLogAspect {
 
     private static final Logger logger = LoggerFactory.getLogger(WebLogAspect.class);
 
-    @Pointcut("execution( * com.classm..controller.*.*(..))")//两个..代表所有子目录，最后括号里的两个..代表所有参数
+    @Pointcut("execution( * com.classm..controller.*.*(..))")//两个..代表所有子directory，最后括号里的两个..代表所有参数
     public void logPointCut() {
     }
 
@@ -30,9 +30,9 @@ public class WebLogAspect {
         HttpServletRequest request = attributes.getRequest();
 
         // 记录下请求内容
-        logger.info("请求地址 : " + request.getRequestURL().toString());
+        logger.info("请求link : " + request.getRequestURL().toString());
         logger.info("HTTP METHOD : " + request.getMethod());
-        // 获取真实的ip地址
+        // 获取真实的iplink
         //logger.info("IP : " + IPAddressUtil.getClientIpAddress(request));
         logger.info("CLASS_METHOD : " + joinPoint.getSignature().getDeclaringTypeName() + "."
                 + joinPoint.getSignature().getName());
@@ -43,7 +43,7 @@ public class WebLogAspect {
 
     @AfterReturning(returning = "ret", pointcut = "logPointCut()")// returning的值和doAfterReturning的参数名一致
     public void doAfterReturning(Object ret) throws Throwable {
-        // 处理完请求，返回内容(返回值太复杂时，打印的是物理存储空间的地址)
+        // 处理完请求，返回内容(返回值太复杂时，打印的是物理存储空间的link)
         logger.debug("返回值 : " + ret);
     }
 

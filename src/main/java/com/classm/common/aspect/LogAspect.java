@@ -72,7 +72,7 @@ public class LogAspect {
         }
         // 获取request
         HttpServletRequest request = HttpContextUtils.getHttpServletRequest();
-        // 设置IP地址
+        // 设置IPlink
         sysLog.setIp(IPUtils.getIpAddr(request));
         // 用户名
         UserDO currUser = ShiroUtils.getUser();
@@ -82,7 +82,7 @@ public class LogAspect {
                 sysLog.setUsername(sysLog.getParams());
             } else {
                 sysLog.setUserId(-1L);
-                sysLog.setUsername("获取用户信息为空");
+                sysLog.setUsername("获取用户Info为空");
             }
         } else {
             sysLog.setUserId(ShiroUtils.getUserId());

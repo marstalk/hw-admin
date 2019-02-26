@@ -625,7 +625,7 @@ Class.pt.callback = function(){
   }
   layer.ie == 6 && that.IE6(layero);
   
-  //按钮
+  //button
   layero.find('.'+ doms[6]).children('a').on('click', function(){
     var index = $(this).index();
     if(index === 0){

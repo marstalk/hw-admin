@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class HwAdminApplication {
     public static void main(String[] args) {
         SpringApplication.run(HwAdminApplication.class, args);
-        System.out.println("ヾ(◍°∇°◍)ﾉﾞ    hw-admin启动成功      ヾ(◍°∇°◍)ﾉﾞ\n" +
+        System.out.println("ヾ(◍°∇°◍)ﾉﾞ    hw-admin startup successfully      ヾ(◍°∇°◍)ﾉﾞ\n" +
                 " ______                    _   ______            \n" +
                 "|_   _ \\                  / |_|_   _ `.          \n" +
                 "  | |_) |   .--.    .--. `| |-' | | `. \\  .--.   \n" +

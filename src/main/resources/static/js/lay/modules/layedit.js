@@ -123,7 +123,7 @@ layui.define(['layer', 'form'], function(exports){
     };
     layedit.sync(index)
   };
-  //将编辑器内容同步到textarea（一般用于异步提交时）
+  //将编辑器内容同步到textarea（一般用于异步Submit时）
   Edit.prototype.sync = function(index){
     var iframeWin = getWin(index);
     if(!iframeWin[0]) return;
@@ -504,7 +504,7 @@ layui.define(['layer', 'form'], function(exports){
           ,'</div>'
         ,'</li>'
         ,'<li class="layui-form-item" style="text-align: center;">'
-          ,'<button type="button" lay-submit lay-filter="layedit-link-yes" class="layui-btn"> 确定 </button>'
+          ,'<button type="button" lay-submit lay-filter="layedit-link-yes" class="layui-btn"> Yes </button>'
           ,'<button style="margin-left: 20px;" type="button" class="layui-btn layui-btn-primary"> 取消 </button>'
         ,'</li>'
       ,'</ul>'].join('')
@@ -601,7 +601,7 @@ layui.define(['layer', 'form'], function(exports){
           ,'</div>'
         ,'</li>'
         ,'<li class="layui-form-item" style="text-align: center;">'
-          ,'<button type="button" lay-submit lay-filter="layedit-code-yes" class="layui-btn"> 确定 </button>'
+          ,'<button type="button" lay-submit lay-filter="layedit-code-yes" class="layui-btn"> Yes </button>'
           ,'<button style="margin-left: 20px;" type="button" class="layui-btn layui-btn-primary"> 取消 </button>'
         ,'</li>'
       ,'</ul>'].join('')

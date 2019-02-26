@@ -15,17 +15,17 @@ function save() {
 		data : $('#signupForm').serialize(), // 你的formid
 		async : false,
 		error : function(request) {
-			parent.layer.alert("网络超时");
+			parent.layer.msg("connection error");
 		},
 		success : function(data) {
 			if (data.code == 0) {
-				parent.layer.msg("操作成功");
+				parent.layer.msg("Success");
 				parent.reLoad();
 				var index = parent.layer.getFrameIndex(window.name);
 				parent.layer.close(index);
 
 			} else {
-				parent.layer.alert(data.msg)
+				parent.layer.msg(data.msg)
 			}
 
 		}

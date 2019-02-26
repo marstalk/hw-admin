@@ -139,10 +139,10 @@ public class UserServiceImpl implements UserService {
                 userDO.setPassword(MD5Utils.encrypt(userDO.getUsername(), userVO.getPwdNew()));
                 return userMapper.update(userDO);
             } else {
-                throw new Exception("输入的旧密码有误！");
+                throw new Exception("Previous password is invalid");
             }
         } else {
-            throw new Exception("你修改的不是你登录的账号！");
+            throw new Exception("You can reset your own account only");
         }
     }
 
@@ -150,7 +150,7 @@ public class UserServiceImpl implements UserService {
     public int adminResetPwd(UserVO userVO) throws Exception {
         UserDO userDO = get(userVO.getUserDO().getUserId());
         if ("admin".equals(userDO.getUsername())) {
-            throw new Exception("超级管理员的账号不允许直接重置！");
+            throw new Exception("Super administrator account can't reset directly");
         }
         userDO.setPassword(MD5Utils.encrypt(userDO.getUsername(), userVO.getPwdNew()));
         return userMapper.update(userDO);
@@ -199,7 +199,7 @@ public class UserServiceImpl implements UserService {
             tree.setState(state);
             trees.add(tree);
         }
-        // 默认顶级菜单为０，根据数据库实际情况调整
+        // 默认顶级menu为０，根据数据库实际情况调整
         Tree<DeptDO> t = BuildTree.build(trees);
         return t;
     }

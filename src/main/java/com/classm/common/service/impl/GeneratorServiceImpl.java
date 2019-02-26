@@ -30,9 +30,9 @@ public class GeneratorServiceImpl implements GeneratorService {
 		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 		ZipOutputStream zip = new ZipOutputStream(outputStream);
 		for(String tableName : tableNames){
-			//查询表信息
+			//查询表Info
 			Map<String, String> table = generatorMapper.get(tableName);
-			//查询列信息
+			//查询列Info
 			List<Map<String, String>> columns = generatorMapper.listColumns(tableName);
 			//生成代码
 			GenUtils.generatorCode(table, columns, zip);

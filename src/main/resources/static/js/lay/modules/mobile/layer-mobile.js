@@ -63,7 +63,7 @@ layui.define(function(exports){
       : '';
     }());
     
-    //按钮区域
+    //button区域
     var button = (function(){
       typeof config.btn === 'string' && (config.btn = [config.btn]);
       var btns = (config.btn || []).length, btndom;
