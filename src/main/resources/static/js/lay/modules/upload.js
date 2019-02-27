@@ -211,14 +211,14 @@ layui.define('layer' , function(exports){
     
       that.elemFile.parent().submit();
 
-      //获取响应Info
+      //Get: 响应Info
       clearInterval(Class.timer);
       Class.timer = setInterval(function() {
         var res, iframeBody = iframe.contents().find('body');
         try {
           res = iframeBody.text();
         } catch(e) {
-          that.msg('获取上传后的响应Info出现异常');
+          that.msg('Get: 上传后的响应Info出现异常');
           clearInterval(Class.timer);
           error();
         }

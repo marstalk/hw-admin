@@ -31,7 +31,7 @@ function load() {
 					},
 					{
 						field : 'name',
-						title : '部门名称',
+						title : 'Department名称',
                         valign : 'center',
 						witth :20
 					},
@@ -43,14 +43,14 @@ function load() {
 					},
 					{
 						field : 'delFlag',
-						title : '状态',
+						title : 'Status',
 						align : 'center',
                         valign : 'center',
 						formatter : function(item, index) {
 							if (item.delFlag == '0') {
-								return '<span class="label label-danger">禁用</span>';
+								return '<span class="label label-danger">Forbidden</span>';
 							} else if (item.delFlag == '1') {
-								return '<span class="label label-primary">正常</span>';
+								return '<span class="label label-primary">Normal</span>';
 							}
 						}
 					},
@@ -85,7 +85,7 @@ function add(pId) {
 		type : 2,
 		title : 'New',
 		maxmin : true,
-		shadeClose : false, // 点击遮罩关闭层
+		shadeClose : false, //
 		area : [ '800px', '520px' ],
 		content : prefix + '/add/' + pId
 	});
@@ -95,9 +95,9 @@ function edit(id) {
 		type : 2,
 		title : 'Edit',
 		maxmin : true,
-		shadeClose : false, // 点击遮罩关闭层
+		shadeClose : false, //
 		area : [ '800px', '520px' ],
-		content : prefix + '/edit/' + id // iframe的url
+		content : prefix + '/edit/' + id //
 	});
 }
 function removeone(id) {
@@ -125,7 +125,7 @@ function removeone(id) {
 function resetPwd(id) {
 }
 function batchRemove() {
-	var rows = $('#exampleTable').bootstrapTable('getSelections'); // 返回所有选择的行，当没有选择的记录时，返回一个空数组
+	var rows = $('#exampleTable').bootstrapTable('getSelections'); //
 	if (rows.length == 0) {
 		layer.msg("Please select what you wanna delete");
 		return;
@@ -135,7 +135,7 @@ function batchRemove() {
 	// button
 	}, function() {
 		var ids = new Array();
-		// 遍历所有选择的行数据，取每条数据对应的ID
+		//
 		$.each(rows, function(i, row) {
 			ids[i] = row['deptId'];
 		});

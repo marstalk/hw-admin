@@ -5,7 +5,7 @@ package com.classm.common.utils;
  * 功能：根据文件名称判断类型
  * 接受参数类型：String 
  * 返回参数类型：String
- * remark ：文件类型不完善，有需要的自行添加
+ * remark ：文件类型不完善，有需要的自行New
  */
 public class FileType {
 	public static int fileType(String fileName) {
@@ -14,7 +14,7 @@ public class FileType {
 			return 500;
 
 		} else {
-			// 获取文件后缀名并转化为写，用于后续比较
+			// Get: 文件后缀名并转化为写，用于后续比较
 			String fileType = fileName.substring(fileName.lastIndexOf(".") + 1, fileName.length()).toLowerCase();
 			// 创建图片类型数组0
 			String[] img = { "bmp", "jpg", "jpeg", "png", "tiff", "gif", "pcx", "tga", "exif", "fpx", "svg", "psd",

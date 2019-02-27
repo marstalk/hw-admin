@@ -10,148 +10,148 @@ import java.util.Date;
  * 
  * @author hw
  * @email hw@test.com
- * @date 2019-02-23 15:32:24
+ * @date 2019-02-26 20:12:42
  */
 public class EndUserDO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	//用户ID
+	//User ID
 	private Integer id;
-	//用户注册类型
+	//User sign-up type
 	private String type;
-	//手机
+	//Phone
 	private String phone;
-	//邮箱
+	//Email
 	private String email;
-	//性别：M男；F女
+	//Gender：M(Male；F(Female)
 	private String gender;
-	//姓氏
+	//First Name
 	private String firstName;
-	//名字
+	//Last Name
 	private String lastName;
-	//生日
+	//Birthday
 	private String birth;
-	//是否接收通知
+	//Notification
 	private String notify;
-	//登陆密码
+	//Password
 	private String pwd;
 
 	/**
-	 * 设置：用户ID
+	 *  Set: User ID
 	 */
 	public void setId(Integer id) {
 		this.id = id;
 	}
 	/**
-	 * 获取：用户ID
+	 * Get: ：User ID
 	 */
 	public Integer getId() {
 		return id;
 	}
 	/**
-	 * 设置：用户注册类型
+	 *  Set: User sign-up type
 	 */
 	public void setType(String type) {
 		this.type = type;
 	}
 	/**
-	 * 获取：用户注册类型
+	 * Get: ：User sign-up type
 	 */
 	public String getType() {
 		return type;
 	}
 	/**
-	 * 设置：手机
+	 *  Set: Phone
 	 */
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	/**
-	 * 获取：手机
+	 * Get: ：Phone
 	 */
 	public String getPhone() {
 		return phone;
 	}
 	/**
-	 * 设置：邮箱
+	 *  Set: Email
 	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
 	/**
-	 * 获取：邮箱
+	 * Get: ：Email
 	 */
 	public String getEmail() {
 		return email;
 	}
 	/**
-	 * 设置：性别：M男；F女
+	 *  Set: Gender：M(Male；F(Female)
 	 */
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
 	/**
-	 * 获取：性别：M男；F女
+	 * Get: ：Gender：M(Male；F(Female)
 	 */
 	public String getGender() {
 		return gender;
 	}
 	/**
-	 * 设置：姓氏
+	 *  Set: First Name
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 	/**
-	 * 获取：姓氏
+	 * Get: ：First Name
 	 */
 	public String getFirstName() {
 		return firstName;
 	}
 	/**
-	 * 设置：名字
+	 *  Set: Last Name
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 	/**
-	 * 获取：名字
+	 * Get: ：Last Name
 	 */
 	public String getLastName() {
 		return lastName;
 	}
 	/**
-	 * 设置：生日
+	 *  Set: Birthday
 	 */
 	public void setBirth(String birth) {
 		this.birth = birth;
 	}
 	/**
-	 * 获取：生日
+	 * Get: ：Birthday
 	 */
 	public String getBirth() {
 		return birth;
 	}
 	/**
-	 * 设置：是否接收通知
+	 *  Set: Notification
 	 */
 	public void setNotify(String notify) {
 		this.notify = notify;
 	}
 	/**
-	 * 获取：是否接收通知
+	 * Get: ：Notification
 	 */
 	public String getNotify() {
 		return notify;
 	}
 	/**
-	 * 设置：登陆密码
+	 *  Set: Password
 	 */
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
 	}
 	/**
-	 * 获取：登陆密码
+	 * Get: ：Password
 	 */
 	public String getPwd() {
 		return pwd;

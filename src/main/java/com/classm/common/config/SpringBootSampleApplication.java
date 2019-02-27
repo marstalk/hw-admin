@@ -8,7 +8,7 @@
 //
 ///**
 // * war包部署需要
-// * 修改启动类，继承 SpringBootServletInitializer 并重写 configure 方法
+// * Update启动类，继承 SpringBootServletInitializer 并重写 configure 方法
 // */
 //public class SpringBootSampleApplication extends SpringBootServletInitializer{
 //

@@ -199,7 +199,7 @@ public class UserServiceImpl implements UserService {
             tree.setState(state);
             trees.add(tree);
         }
-        // 默认顶级menu为０，根据数据库实际情况调整
+
         Tree<DeptDO> t = BuildTree.build(trees);
         return t;
     }
@@ -214,18 +214,18 @@ public class UserServiceImpl implements UserService {
         String fileName = file.getOriginalFilename();
         fileName = FileUtil.renameToUUID(fileName);
         FileDO sysFile = new FileDO(FileType.fileType(fileName), "/files/" + fileName, new Date());
-        //获取图片后缀
+        //Get: 图片后缀
         String prefix = fileName.substring((fileName.lastIndexOf(".") + 1));
         String[] str = avatar_data.split(",");
-        //获取截取的x坐标
+        //Get: 截取的x坐标
         int x = (int) Math.floor(Double.parseDouble(str[0].split(":")[1]));
-        //获取截取的y坐标
+        //Get: 截取的y坐标
         int y = (int) Math.floor(Double.parseDouble(str[1].split(":")[1]));
-        //获取截取的高度
+        //Get: 截取的高度
         int h = (int) Math.floor(Double.parseDouble(str[2].split(":")[1]));
-        //获取截取的宽度
+        //Get: 截取的宽度
         int w = (int) Math.floor(Double.parseDouble(str[3].split(":")[1]));
-        //获取旋转的角度
+        //Get: 旋转的角度
         int r = Integer.parseInt(str[4].split(":")[1].replaceAll("}", ""));
         try {
             BufferedImage cutImage = ImageUtils.cutImage(file, x, y, w, h, prefix);

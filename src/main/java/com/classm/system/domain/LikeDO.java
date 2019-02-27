@@ -10,50 +10,50 @@ import java.util.Date;
  * 
  * @author hw
  * @email hw@test.com
- * @date 2019-02-23 15:32:24
+ * @date 2019-02-26 20:12:43
  */
 public class LikeDO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	//自增ID
+	//ID
 	private Integer id;
-	//用户ID
+	//User ID
 	private Integer userId;
-	//商品ID
+	//Goods ID
 	private String goodsId;
 
 	/**
-	 * 设置：自增ID
+	 *  Set: ID
 	 */
 	public void setId(Integer id) {
 		this.id = id;
 	}
 	/**
-	 * 获取：自增ID
+	 * Get: ：ID
 	 */
 	public Integer getId() {
 		return id;
 	}
 	/**
-	 * 设置：用户ID
+	 *  Set: User ID
 	 */
 	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}
 	/**
-	 * 获取：用户ID
+	 * Get: ：User ID
 	 */
 	public Integer getUserId() {
 		return userId;
 	}
 	/**
-	 * 设置：商品ID
+	 *  Set: Goods ID
 	 */
 	public void setGoodsId(String goodsId) {
 		this.goodsId = goodsId;
 	}
 	/**
-	 * 获取：商品ID
+	 * Get: ：Goods ID
 	 */
 	public String getGoodsId() {
 		return goodsId;

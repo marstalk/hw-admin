@@ -91,7 +91,7 @@ public class RedisCache<K, V> implements Cache<K, V> {
 
     @Override
     public V get(K key) throws CacheException {
-        logger.debug("根据key从Redis中获取对象 key [" + key + "]");
+        logger.debug("根据key从Redis中Get: 对象 key [" + key + "]");
         try {
             if (key == null) {
                 return null;
@@ -120,7 +120,7 @@ public class RedisCache<K, V> implements Cache<K, V> {
 
     @Override
     public V remove(K key) throws CacheException {
-        logger.debug("从redis中删除 key [" + key + "]");
+        logger.debug("从redis中Delete key [" + key + "]");
         try {
             V previous = get(key);
             cache.del(getByteKey(key));
@@ -132,7 +132,7 @@ public class RedisCache<K, V> implements Cache<K, V> {
 
     @Override
     public void clear() throws CacheException {
-        logger.debug("从redis中删除所有元素");
+        logger.debug("从redis中Delete所有元素");
         try {
             cache.flushDB();
         } catch (Throwable t) {

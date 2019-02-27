@@ -10,92 +10,92 @@ import java.util.Date;
  * 
  * @author hw
  * @email hw@test.com
- * @date 2019-02-23 15:32:24
+ * @date 2019-02-26 20:12:42
  */
 public class CommentDO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	//id
+	//ID
 	private Integer id;
-	//用户ID
+	//User ID
 	private Integer userId;
-	//用户名字
+	//User Name
 	private String userName;
-	//商品ID
+	//Goods ID
 	private String goodsId;
-	//评论详情
+	//Comment
 	private String comment;
-	//评论日期
+	//Comment Date
 	private Date cDate;
 
 	/**
-	 * 设置：id
+	 *  Set: ID
 	 */
 	public void setId(Integer id) {
 		this.id = id;
 	}
 	/**
-	 * 获取：id
+	 * Get: ：ID
 	 */
 	public Integer getId() {
 		return id;
 	}
 	/**
-	 * 设置：用户ID
+	 *  Set: User ID
 	 */
 	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}
 	/**
-	 * 获取：用户ID
+	 * Get: ：User ID
 	 */
 	public Integer getUserId() {
 		return userId;
 	}
 	/**
-	 * 设置：用户名字
+	 *  Set: User Name
 	 */
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
 	/**
-	 * 获取：用户名字
+	 * Get: ：User Name
 	 */
 	public String getUserName() {
 		return userName;
 	}
 	/**
-	 * 设置：商品ID
+	 *  Set: Goods ID
 	 */
 	public void setGoodsId(String goodsId) {
 		this.goodsId = goodsId;
 	}
 	/**
-	 * 获取：商品ID
+	 * Get: ：Goods ID
 	 */
 	public String getGoodsId() {
 		return goodsId;
 	}
 	/**
-	 * 设置：评论详情
+	 *  Set: Comment
 	 */
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
 	/**
-	 * 获取：评论详情
+	 * Get: ：Comment
 	 */
 	public String getComment() {
 		return comment;
 	}
 	/**
-	 * 设置：评论日期
+	 *  Set: Comment Date
 	 */
 	public void setCDate(Date cDate) {
 		this.cDate = cDate;
 	}
 	/**
-	 * 获取：评论日期
+	 * Get: ：Comment Date
 	 */
 	public Date getCDate() {
 		return cDate;

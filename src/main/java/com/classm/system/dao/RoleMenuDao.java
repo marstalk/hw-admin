@@ -8,7 +8,7 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * 角色与menu对应关系
+ * Role与menu对应关系
  * @author
  * @email
  * @date 2017-10-03 11:08:59

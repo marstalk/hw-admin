@@ -886,7 +886,7 @@ $(function () {
                     emphasis: {
                         label: {
                             show: false
-                            // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+                            // textStyle: null       认使用全局文本样式，详见TEXTSTYLE
                         },
                         nodeStyle : {
                             //r: 30
@@ -993,7 +993,7 @@ $(function () {
             {
                 name:'转速',
                 type:'gauge',
-                center : ['25%', '55%'],    // 默认全局居中
+                center : ['25%', '55%'],     认全局居中
                 radius : '50%',
                 min:0,
                 max:7,
@@ -1032,7 +1032,7 @@ $(function () {
             {
                 name:'油表',
                 type:'gauge',
-                center : ['75%', '50%'],    // 默认全局居中
+                center : ['75%', '50%'],     认全局居中
                 radius : '50%',
                 min:0,
                 max:2,
@@ -1081,7 +1081,7 @@ $(function () {
             {
                 name:'水表',
                 type:'gauge',
-                center : ['75%', '50%'],    // 默认全局居中
+                center : ['75%', '50%'],     认全局居中
                 radius : '50%',
                 min:0,
                 max:2,

@@ -10,7 +10,7 @@ $('.tooltip-demo').tooltip({
     container: "body"
 });
 
-// 使用animation.css修改Bootstrap Modal
+// 使用animation.cssUpdateBootstrap Modal
 $('.modal').appendTo("body");
 
 $("[data-toggle=popover]").popover();

@@ -28,7 +28,7 @@ public class JsoupUtil {
 	static {
 		// 富文本编辑时一些样式是使用style来进行实现的
 		// 比如红色字体 style="color:red;"
-		// 所以需要给所有标签添加style属性
+		// 所以需要给所有标签Newstyle属性
 		whitelist.addAttributes(":all", "style");
 	}
 

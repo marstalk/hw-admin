@@ -67,7 +67,7 @@ public class LikeController {
 	}
 	
 	/**
-	 * 保存
+	 * Save
 	 */
 	@ResponseBody
 	@PostMapping("/save")
@@ -79,7 +79,7 @@ public class LikeController {
 		return R.error();
 	}
 	/**
-	 * 修改
+	 * Update
 	 */
 	@ResponseBody
 	@RequestMapping("/update")
@@ -90,7 +90,7 @@ public class LikeController {
 	}
 	
 	/**
-	 * 删除
+	 * Delete
 	 */
 	@PostMapping( "/remove")
 	@ResponseBody
@@ -103,7 +103,7 @@ public class LikeController {
 	}
 	
 	/**
-	 * 删除
+	 * Delete
 	 */
 	@PostMapping( "/batchRemove")
 	@ResponseBody

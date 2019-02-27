@@ -47,7 +47,7 @@ layui.define('jquery', function(exports){
     width: '600px'
     ,height: '280px'
     ,full: false //是否全屏
-    ,arrow: 'hover' //切换箭头默认显示状态：hover/always/none
+    ,arrow: 'hover' //切换箭头默认显示Status：hover/always/none
     ,indicator: 'inside' //指示器位置：inside/outside/none
     ,autoplay: true //是否自动切换
     ,interval: 3000 //自动切换的时间间隔，不能低于800ms
@@ -86,7 +86,7 @@ layui.define('jquery', function(exports){
     
     options.elem.attr('lay-anim', options.anim);
     
-    //初始焦点状态
+    //初始焦点Status
     that.elemItem.eq(options.index).addClass(THIS);
     
     //指示器等动作
@@ -105,7 +105,7 @@ layui.define('jquery', function(exports){
     that.render();
   };
   
-  //获取上一个等待条目的索引
+  //Get: 上一个等待条目的索引
   Class.prototype.prevIndex = function(){
     var that = this
     ,options = that.config;
@@ -117,7 +117,7 @@ layui.define('jquery', function(exports){
     return prevIndex;
   };
   
-  //获取下一个等待条目的索引
+  //Get: 下一个等待条目的索引
   Class.prototype.nextIndex = function(){
     var that = this
     ,options = that.config;

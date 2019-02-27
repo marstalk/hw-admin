@@ -262,7 +262,7 @@ KISBPM.TOOLBAR = {
         
         closeEditor: function(services) {
         	//window.location.href = "./";
-            var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
+            var index = parent.layer.getFrameIndex(window.name); // Get: 窗口索引
             parent.layer.close(index);
             parent.reLoad();
         },
@@ -330,7 +330,7 @@ var SaveModelCtrl = [ '$rootScope', '$scope', '$http', '$route', '$location',
     $scope.saveAndClose = function () {
     	$scope.save(function() {
     		//window.location.href = "./";
-            var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
+            var index = parent.layer.getFrameIndex(window.name); // Get: 窗口索引
             parent.layer.close(index);
             parent.reLoad();
     	});

@@ -50,7 +50,7 @@ layui.define(['layer-mobile', 'zepto'] , function(exports){
       item = $(item);
       var form = '<form target="'+ elemIframe +'" method="'+ (options.method||'post') +'" key="set-mine" enctype="multipart/form-data" action="'+ (options.url||'') +'"></form>';
       
-      var type = item.attr('lay-type') || options.type; //获取文件类型
+      var type = item.attr('lay-type') || options.type; //Get: 文件类型
 
       //包裹ui元素
       if(!options.unwrap){
@@ -96,7 +96,7 @@ layui.define(['layer-mobile', 'zepto'] , function(exports){
   //Submit上传
   Upload.prototype.action = function(input, type){
     var that = this, options = that.options, val = input.value;
-    var item = $(input), ext = item.attr('lay-ext') || options.ext || ''; //获取支持上传的文件扩展名;
+    var item = $(input), ext = item.attr('lay-ext') || options.ext || ''; //Get: 支持上传的文件扩展名;
 
     if(!val){
       return;

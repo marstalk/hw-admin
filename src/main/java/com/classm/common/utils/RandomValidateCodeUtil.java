@@ -74,7 +74,7 @@ public class RandomValidateCodeUtil {
             randomString = drowString(g, randomString, i);
         }
         logger.info(randomString);
-        //将生成的随机字符串保存到session中
+        //将生成的随机字符串Save到session中
         session.removeAttribute(RANDOMCODEKEY);
         session.setAttribute(RANDOMCODEKEY, randomString);
         g.dispose();
@@ -114,7 +114,7 @@ public class RandomValidateCodeUtil {
     }
 
     /**
-     * 获取随机的字符
+     * Get: 随机的字符
      */
     public String getRandomString(int num) {
         return String.valueOf(randString.charAt(num));

@@ -17,7 +17,7 @@
       return jsPath.substring(0, jsPath.lastIndexOf('/') + 1);
     }()
     
-    //获取节点的style属性值
+    //Get: 节点的style属性值
     ,getStyle: function(node, name){
       var style = node.currentStyle ? node.currentStyle : window.getComputedStyle(node, null);
       return style[style.getPropertyValue ? 'getPropertyValue' : 'getAttribute'](name);
@@ -261,7 +261,7 @@
     return lay.each.call(this, this, fn);
   };
   
-  //添加css类
+  //Newcss类
   LAY.prototype.addClass = function(className, type){
     return this.each(function(index, item){
       item.className = LAY[type ? 'removeStr' : 'addStr'](item.className, className)
@@ -284,7 +284,7 @@
     return has;
   };
   
-  //添加或获取属性
+  //New或Get: 属性
   LAY.prototype.attr = function(key, value){
     var that = this;
     return value === undefined ? function(){
@@ -504,7 +504,7 @@
       ,'0-12-25': '圣诞'
     } : {}, options.mark);
     
-    //获取限制内日期
+    //Get: 限制内日期
     lay.each(['min', 'max'], function(i, item){
       var ymd = [], hms = [];
       if(typeof options[item] === 'number'){ //如果为数字
@@ -792,7 +792,7 @@
     }, 3000);
   };
   
-  //获取递增/减后的年月
+  //Get: 递增/减后的年月
   Class.prototype.getAsYM = function(Y, M, type){
     type ? M-- : M++;
     if(M < 0){
@@ -1067,7 +1067,7 @@
             ,[that.endDate.year, that.endDate.month + 1]
           ];  
           that.list(options.type, 0).list(options.type, 1);
-          //同步button可点状态
+          //同步button可点Status
           options.type === 'time' ? that.setBtnStatus('时间'
             ,lay.extend({}, that.systemDate(), that.startTime)
             ,lay.extend({}, that.systemDate(), that.endTime)
@@ -1165,7 +1165,7 @@
       lay(elemYM[isCN ? 0 : 1]).attr('lay-ym', listYM[0] + '-' + listYM[1])
       .html(listYM[0] + text);
     } else if(type === 'time'){ //时间列表
-      //检测时分秒状态是否在有效日期时间范围内
+      //检测时分秒Status是否在有效日期时间范围内
       var setTimeStatus = function(){
         lay(ul).find('ol').each(function(i, ol){
           lay(ol).find('li').each(function(ii, li){
@@ -1250,7 +1250,7 @@
           that.closeList();
         }
 
-        that.setBtnStatus(); //同步button可点状态
+        that.setBtnStatus(); //同步button可点Status
         options.range || that.done(null, 'change');
         lay(that.footer).find(ELEM_TIME_BTN).removeClass(DISABLED);
       });
@@ -1296,7 +1296,7 @@
           scroll();
           (that.endDate || options.type === 'time') && that.done(null, 'change');
           
-          //同步button可点状态
+          //同步button可点Status
           that.setBtnStatus();
         });
       });
@@ -1331,7 +1331,7 @@
       end = end || that.endDate;
       isOut = that.newDate(start).getTime() > that.newDate(end).getTime();
       
-      //如果不在有效日期内，直接禁用button，否则比较开始和结束日期
+      //如果不在有效日期内，直接Forbiddenbutton，否则比较开始和结束日期
       (that.limit(null, start) || that.limit(null, end)) 
         ? elemBtn.addClass(DISABLED)
       : elemBtn[isOut ? 'addClass' : 'removeClass'](DISABLED);

@@ -29,7 +29,7 @@ layui.define('layer', function(exports){
         ]
         ,email: [
           /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
-          ,'邮箱格式不正确'
+          ,' Email格式不正确'
         ]
         ,url: [
           /(^#)|(^http(s*):\/\/[^\s]+\.[^\s]+)/
@@ -136,7 +136,7 @@ layui.define('layer', function(exports){
             dl.find('.'+NONE).remove();
           }); 
           
-          //点击箭头获取焦点
+          //点击箭头Get: 焦点
           title.find('.layui-edge').on('click', function(){
             input.focus();
           });
@@ -212,7 +212,7 @@ layui.define('layer', function(exports){
           //选择
           dds.on('click', function(){
             var othis = $(this), value = othis.attr('lay-value');
-            var filter = select.attr('lay-filter'); //获取过滤器
+            var filter = select.attr('lay-filter'); //Get: 过滤器
 
             if(othis.hasClass(DISABLED)) return false;
             
@@ -248,7 +248,7 @@ layui.define('layer', function(exports){
           ,hasRender = othis.next('.'+CLASS)
           ,disabled = this.disabled
           ,value = select.value
-          ,selected = $(select.options[select.selectedIndex]) //获取当前选中项
+          ,selected = $(select.options[select.selectedIndex]) //Get: 当前选中项
           ,optionsFirst = select.options[0];
           
           if(typeof othis.attr('lay-ignore') === 'string') return othis.show();
@@ -296,7 +296,7 @@ layui.define('layer', function(exports){
           
           //勾选
           reElem.on('click', function(){
-            var filter = check.attr('lay-filter') //获取过滤器
+            var filter = check.attr('lay-filter') //Get: 过滤器
             ,text = (check.attr('lay-text')||'').split('|');
 
             if(check[0].disabled) return;
@@ -349,7 +349,7 @@ layui.define('layer', function(exports){
           
           reElem.on('click', function(){
             var name = radio[0].name, forms = radio.parents(ELEM);
-            var filter = radio.attr('lay-filter'); //获取过滤器
+            var filter = radio.attr('lay-filter'); //Get: 过滤器
             var sameRadio = forms.find('input[name='+ name.replace(/(\.|#|\[|\])/g, '\\$1') +']'); //找到相同name的兄弟
             
             if(radio[0].disabled) return;
@@ -403,10 +403,10 @@ layui.define('layer', function(exports){
     var button = $(this), verify = form.config.verify, stop = null
     ,DANGER = 'layui-form-danger', field = {} ,elem = button.parents(ELEM)
     
-    ,verifyElem = elem.find('*[lay-verify]') //获取需要校验的元素
-    ,formElem = button.parents('form')[0] //获取当前所在的form元素，如果存在的话
-    ,fieldElem = elem.find('input,select,textarea') //获取所有表单域
-    ,filter = button.attr('lay-filter'); //获取过滤器
+    ,verifyElem = elem.find('*[lay-verify]') //Get: 需要校验的元素
+    ,formElem = button.parents('form')[0] //Get: 当前所在的form元素，如果存在的话
+    ,fieldElem = elem.find('input,select,textarea') //Get: 所有表单域
+    ,filter = button.attr('lay-filter'); //Get: 过滤器
  
     //开始校验
     layui.each(verifyElem, function(_, item){
@@ -439,7 +439,7 @@ layui.define('layer', function(exports){
       field[item.name] = item.value;
     });
  
-    //获取字段
+    //Get: 字段
     return layui.event.call(this, MOD_NAME, 'submit('+ filter +')', {
       elem: this
       ,form: formElem

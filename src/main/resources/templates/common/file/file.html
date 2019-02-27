@@ -73,7 +73,7 @@
                                 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<button
                                     class="btn btn-warning btn-xs copy" :url="row.url">复制
                             </button>&nbsp; &nbsp; &nbsp; &nbsp;<button class="btn btn-danger btn-xs"
-                                                                        @click="remove(row.id)">删除
+                                                                        @click="remove(row.id)">Delete
                             </button>
                             </a>
                         </div>
@@ -131,7 +131,7 @@
                     alignment: 'center',
                     size: 'large',
                     shouldShowPage: true,
-                    itemTexts: function (type, page, current) { //修改显示文字
+                    itemTexts: function (type, page, current) { //Update显示文字
                         switch (type) {
                             case "first":
                                 return "Index";

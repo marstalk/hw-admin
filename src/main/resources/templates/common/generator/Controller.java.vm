@@ -66,7 +66,7 @@ public class ${className}Controller {
 	}
 	
 	/**
-	 * 保存
+	 * Save
 	 */
 	@ResponseBody
 	@PostMapping("/save")
@@ -78,7 +78,7 @@ public class ${className}Controller {
 		return R.error();
 	}
 	/**
-	 * 修改
+	 * Update
 	 */
 	@ResponseBody
 	@RequestMapping("/update")
@@ -89,7 +89,7 @@ public class ${className}Controller {
 	}
 	
 	/**
-	 * 删除
+	 * Delete
 	 */
 	@PostMapping( "/remove")
 	@ResponseBody
@@ -102,7 +102,7 @@ public class ${className}Controller {
 	}
 	
 	/**
-	 * 删除
+	 * Delete
 	 */
 	@PostMapping( "/batchRemove")
 	@ResponseBody

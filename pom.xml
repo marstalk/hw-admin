@@ -218,7 +218,7 @@
             <version>2.6.1</version>
         </dependency>
 
-        <!-- 添加redis支持-->
+        <!-- Newredis支持-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>

@@ -40,7 +40,7 @@ public class MenuController extends BaseController {
 		return menus;
 	}
 
-	@Log("添加menu")
+	@Log("Newmenu")
 	@RequiresPermissions("sys:menu:add")
 	@GetMapping("/add/{pId}")
 	String add(Model model, @PathVariable("pId") Long pId) {
@@ -69,18 +69,18 @@ public class MenuController extends BaseController {
 		return prefix+"/edit";
 	}
 
-	@Log("保存menu")
+	@Log("Savemenu")
 	@RequiresPermissions("sys:menu:add")
 	@PostMapping("/save")
 	@ResponseBody
 	R save(MenuDO menu) {
 		if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		if (menuService.save(menu) > 0) {
 			return R.ok();
 		} else {
-			return R.error(1, "保存失败");
+			return R.error(1, "Save失败");
 		}
 	}
 
@@ -90,7 +90,7 @@ public class MenuController extends BaseController {
 	@ResponseBody
 	R update(MenuDO menu) {
 		if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		if (menuService.update(menu) > 0) {
 			return R.ok();
@@ -99,18 +99,18 @@ public class MenuController extends BaseController {
 		}
 	}
 
-	@Log("删除menu")
+	@Log("Deletemenu")
 	@RequiresPermissions("sys:menu:remove")
 	@PostMapping("/remove")
 	@ResponseBody
 	R remove(Long id) {
 		if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		if (menuService.remove(id) > 0) {
 			return R.ok();
 		} else {
-			return R.error(1, "删除失败");
+			return R.error(1, "Delete失败");
 		}
 	}
 

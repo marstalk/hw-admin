@@ -23,7 +23,7 @@ var isLayui = window.layui && layui.define, $, win, ready = {
   //五种原始层模式
   type: ['dialog', 'page', 'iframe', 'loading', 'tips'],
   
-  //获取节点的style属性值
+  //Get: 节点的style属性值
   getStyle: function(node, name){
     var style = node.currentStyle ? node.currentStyle : window.getComputedStyle(node, null);
     return style[style.getPropertyValue ? 'getPropertyValue' : 'getAttribute'](name);
@@ -745,18 +745,18 @@ ready.rescollbar = function(index){
 
 window.layer = layer;
 
-//获取子iframe的DOM
+//Get: 子iframe的DOM
 layer.getChildFrame = function(selector, index){
   index = index || $('.'+doms[4]).attr('times');
   return $('#'+ doms[0] + index).find('iframe').contents().find(selector);  
 };
 
-//得到当前iframe层的索引，子iframe时使用
+//得到当前   的索引，子iframe时使用
 layer.getFrameIndex = function(name){
   return $('#'+ name).parents('.'+doms[4]).attr('times');
 };
 
-//iframe层自适应宽高
+//   自适应宽高
 layer.iframeAuto = function(index){
   if(!index) return;
   var heg = layer.getChildFrame('html', index).outerHeight();
@@ -1068,7 +1068,7 @@ layer.photos = function(options, loop, key){
   var success = options.success;
   delete options.success;
 
-  if(!type){ //页面直接获取
+  if(!type){ //页面直接Get: 
     var parent = $(options.photos), pushData = function(){
       data = [];
       parent.find(options.img).each(function(index){

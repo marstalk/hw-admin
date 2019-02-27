@@ -116,7 +116,7 @@ public class GenUtils {
         map.put("datetime", DateUtils.format(new Date(), DateUtils.DATE_TIME_PATTERN));
         VelocityContext context = new VelocityContext(map);
 
-        //获取模板列表
+        //Get: 模板列表
         List<String> templates = getTemplates();
         for (String template : templates) {
             //渲染模板
@@ -125,7 +125,7 @@ public class GenUtils {
             tpl.merge(context, sw);
 
             try {
-                //添加到zip
+                //New到zip
                 zip.putNextEntry(new ZipEntry(getFileName(template, tableDO.getClassname(), tableDO.getClassName(), config.getString("package").substring(config.getString("package").lastIndexOf(".") + 1))));
                 IOUtils.write(sw.toString(), zip, "UTF-8");
                 IOUtils.closeQuietly(sw);
@@ -159,18 +159,18 @@ public class GenUtils {
     }
 
     /**
-     * 获取配置Info
+     * Get: 配置Info
      */
     public static Configuration getConfig() {
         try {
             return new PropertiesConfiguration("generator.properties");
         } catch (ConfigurationException e) {
-            throw new BDException("获取配置文件失败，", e);
+            throw new BDException("Get: 配置文件失败，", e);
         }
     }
 
     /**
-     * 获取文件名
+     * Get: 文件名
      */
     public static String getFileName(String template, String classname, String className, String packageName) {
         String packagePath = "main" + File.separator + "java" + File.separator;

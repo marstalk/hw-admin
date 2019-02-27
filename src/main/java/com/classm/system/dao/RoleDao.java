@@ -8,7 +8,7 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * 角色
+ * Role
  * @author
  * @email
  * @date 2017-10-02 20:24:47

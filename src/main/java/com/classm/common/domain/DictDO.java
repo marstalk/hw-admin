@@ -40,161 +40,161 @@ public class DictDO implements Serializable {
 	private Date updateDate;
 	//remark Info
 	private String remarks;
-	//删除标记
+	//Delete标记
 	private String delFlag;
 
 	/**
-	 * 设置：编号
+	 *  Set: 编号
 	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
 	/**
-	 * 获取：编号
+	 * Get: ：编号
 	 */
 	public Long getId() {
 		return id;
 	}
 	/**
-	 * 设置：标签名
+	 *  Set: 标签名
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 	/**
-	 * 获取：标签名
+	 * Get: ：标签名
 	 */
 	public String getName() {
 		return name;
 	}
 	/**
-	 * 设置：数据值
+	 *  Set: 数据值
 	 */
 	public void setValue(String value) {
 		this.value = value;
 	}
 	/**
-	 * 获取：数据值
+	 * Get: ：数据值
 	 */
 	public String getValue() {
 		return value;
 	}
 	/**
-	 * 设置：类型
+	 *  Set: 类型
 	 */
 	public void setType(String type) {
 		this.type = type;
 	}
 	/**
-	 * 获取：类型
+	 * Get: ：类型
 	 */
 	public String getType() {
 		return type;
 	}
 	/**
-	 * 设置：描述
+	 *  Set: 描述
 	 */
 	public void setDescription(String description) {
 		this.description = description;
 	}
 	/**
-	 * 获取：描述
+	 * Get: ：描述
 	 */
 	public String getDescription() {
 		return description;
 	}
 	/**
-	 * 设置：排序（升序）
+	 *  Set: 排序（升序）
 	 */
 	public void setSort(BigDecimal sort) {
 		this.sort = sort;
 	}
 	/**
-	 * 获取：排序（升序）
+	 * Get: ：排序（升序）
 	 */
 	public BigDecimal getSort() {
 		return sort;
 	}
 	/**
-	 * 设置：父级编号
+	 *  Set: 父级编号
 	 */
 	public void setParentId(Long parentId) {
 		this.parentId = parentId;
 	}
 	/**
-	 * 获取：父级编号
+	 * Get: ：父级编号
 	 */
 	public Long getParentId() {
 		return parentId;
 	}
 	/**
-	 * 设置：创建者
+	 *  Set: 创建者
 	 */
 	public void setCreateBy(Integer createBy) {
 		this.createBy = createBy;
 	}
 	/**
-	 * 获取：创建者
+	 * Get: ：创建者
 	 */
 	public Integer getCreateBy() {
 		return createBy;
 	}
 	/**
-	 * 设置：创建时间
+	 *  Set: 创建时间
 	 */
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
 	/**
-	 * 获取：创建时间
+	 * Get: ：创建时间
 	 */
 	public Date getCreateDate() {
 		return createDate;
 	}
 	/**
-	 * 设置：更新者
+	 *  Set: 更新者
 	 */
 	public void setUpdateBy(Long updateBy) {
 		this.updateBy = updateBy;
 	}
 	/**
-	 * 获取：更新者
+	 * Get: ：更新者
 	 */
 	public Long getUpdateBy() {
 		return updateBy;
 	}
 	/**
-	 * 设置：更新时间
+	 *  Set: 更新时间
 	 */
 	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
 	}
 	/**
-	 * 获取：更新时间
+	 * Get: ：更新时间
 	 */
 	public Date getUpdateDate() {
 		return updateDate;
 	}
 	/**
-	 * 设置：remark Info
+	 *  Set: remark Info
 	 */
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
 	/**
-	 * 获取：remark Info
+	 * Get: ：remark Info
 	 */
 	public String getRemarks() {
 		return remarks;
 	}
 	/**
-	 * 设置：删除标记
+	 *  Set: Delete标记
 	 */
 	public void setDelFlag(String delFlag) {
 		this.delFlag = delFlag;
 	}
 	/**
-	 * 获取：删除标记
+	 * Get: ：Delete标记
 	 */
 	public String getDelFlag() {
 		return delFlag;

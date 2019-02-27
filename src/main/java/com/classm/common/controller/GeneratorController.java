@@ -90,7 +90,7 @@ public class GeneratorController {
 			conf.setProperty("tablePrefix", map.get("tablePrefix"));
 			conf.save();
 		} catch (ConfigurationException e) {
-			return R.error("保存配置文件出错");
+			return R.error("Save配置文件出错");
 		}
 		return R.ok();
 	}

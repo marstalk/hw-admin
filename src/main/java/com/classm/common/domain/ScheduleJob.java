@@ -23,7 +23,7 @@ public class ScheduleJob implements Serializable ,Job {
 	 */
 	private String jobGroup;
 	/**
-	 * 任务状态 是否启动任务
+	 * 任务Status 是否启动任务
 	 */
 	private String jobStatus;
 	/**
@@ -39,7 +39,7 @@ public class ScheduleJob implements Serializable ,Job {
 	 */
 	private String beanClass;
 	/**
-	 * 任务是否有状态
+	 * 任务是否有Status
 	 */
 	private String isConcurrent;
 

@@ -5,7 +5,7 @@ $().ready(function() {
 
 $.validator.setDefaults({
 	submitHandler : function() {
-		console.log('Submit修改');
+		console.log('SubmitUpdate');
 		update();
 	}
 });

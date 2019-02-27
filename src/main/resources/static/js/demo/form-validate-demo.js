@@ -1,4 +1,4 @@
-//以下为修改jQuery Validation插件兼容Bootstrap的方法，没有直接写在插件中是为了便于插件升级
+//以下为UpdatejQuery Validation插件兼容Bootstrap的方法，没有直接写在插件中是为了便于插件升级
         $.validator.setDefaults({
             highlight: function (element) {
                 $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
@@ -58,8 +58,8 @@
                     firstname: icon + "请输入你的姓",
                     lastname: icon + "请输入您的名字",
                     username: {
-                        required: icon + "请输入您的用户名",
-                        minlength: icon + "用户名必须两个字符以上"
+                        required: icon + "请输入您的 UserName",
+                        minlength: icon + " UserName必须两个字符以上"
                     },
                     password: {
                         required: icon + "请输入您的密码",

@@ -22,7 +22,7 @@ public class Tree<T> {
 	 */
 	private String text;
 	/**
-	 * 节点状态，open closed
+	 * 节点Status，open closed
 	 */
 	private Map<String, Object> state;
 	/**

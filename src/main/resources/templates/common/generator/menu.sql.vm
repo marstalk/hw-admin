@@ -11,6 +11,6 @@ INSERT INTO `sys_menu` (`parent_id`, `name`, `url`, `perms`, `type`, `icon`, `or
 INSERT INTO `sys_menu` (`parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`)
     SELECT @parentId, '新增', null, '${pathName}:save', '2', null, '6';
 INSERT INTO `sys_menu` (`parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`)
-    SELECT @parentId, '修改', null, '${pathName}:update', '2', null, '6';
+    SELECT @parentId, 'Update', null, '${pathName}:update', '2', null, '6';
 INSERT INTO `sys_menu` (`parent_id`, `name`, `url`, `perms`, `type`, `icon`, `order_num`)
-    SELECT @parentId, '删除', null, '${pathName}:delete', '2', null, '6';
+    SELECT @parentId, 'Delete', null, '${pathName}:delete', '2', null, '6';

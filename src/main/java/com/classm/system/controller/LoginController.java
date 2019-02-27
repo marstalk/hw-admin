@@ -76,7 +76,7 @@ public class LoginController extends BaseController {
     R ajaxLogin(String username, String password,String verify,HttpServletRequest request) {
 
         try {
-            //从session中获取随机数
+            //从session中Get: 随机数
             String random = (String) request.getSession().getAttribute(RandomValidateCodeUtil.RANDOMCODEKEY);
             if (StringUtils.isBlank(verify)) {
                 return R.error("Please enter your code");

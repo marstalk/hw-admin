@@ -29,7 +29,7 @@ layui.define('jquery', function(exports){
   //初始化
   Tree.prototype.init = function(elem){
     var that = this;
-    elem.addClass('layui-box layui-tree'); //添加tree样式
+    elem.addClass('layui-box layui-tree'); //Newtree样式
     if(that.options.skin){
       elem.addClass('layui-tree-skin-'+ that.options.skin);
     }

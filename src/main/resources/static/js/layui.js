@@ -13,7 +13,7 @@
 
   var doc = document, config = {
     modules: {} //记录模块物理路径
-    ,status: {} //记录模块加载状态
+    ,status: {} //记录模块加载Status
     ,timeout: 10 //符合规范的模块请求最长等待秒数
     ,event: {} //记录模块自定义事件
   }
@@ -22,7 +22,7 @@
     this.v = '2.1.5'; //版本号
   }
 
-  //获取layui所在directory
+  //Get: layui所在directory
   ,getPath = function(){
     var js = doc.scripts
     ,jsPath = js[js.length - 1].src;
@@ -186,7 +186,7 @@
     return that;
   };
 
-  //获取节点的style属性值
+  //Get: 节点的style属性值
   Layui.prototype.getStyle = function(node, name){
     var style = node.currentStyle ? node.currentStyle : win.getComputedStyle(node, null);
     return style[style.getPropertyValue ? 'getPropertyValue' : 'getAttribute'](name);
@@ -314,7 +314,7 @@
     
     if(!win.JSON || !win.JSON.parse) return;
     
-    //如果settings为null，则删除表
+    //如果settings为null，则Delete表
     if(settings === null){
       return delete localStorage[table];
     }
@@ -340,7 +340,7 @@
   Layui.prototype.device = function(key){
     var agent = navigator.userAgent.toLowerCase()
 
-    //获取版本号
+    //Get: 版本号
     ,getVersion = function(label){
       var exp = new RegExp(label + '/([^\\s\\_\\-]+)');
       label = (agent.match(exp)||[])[1];
@@ -470,7 +470,7 @@
     var that = this
     ,result = null
     ,filter = events.match(/\(.*\)$/)||[] //提取事件过滤器
-    ,set = (events = modName + '.'+ events).replace(filter, '') //获取事件本体名
+    ,set = (events = modName + '.'+ events).replace(filter, '') //Get: 事件本体名
     ,callback = function(_, item){
       var res = item && item.call(that, params);
       res === false && result === null && (result = false);

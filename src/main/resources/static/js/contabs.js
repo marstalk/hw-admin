@@ -106,7 +106,7 @@ $(function () {
     });
 
     function menuItem() {
-        // 获取标识数据
+        // Get: 标识数据
         var dataUrl = $(this).attr('href'),
             dataIndex = $(this).data('index'),
             menuName = $.trim($(this).text()),
@@ -137,7 +137,7 @@ $(function () {
             var str = '<a href="javascript:;" class="active J_menuTab" data-id="' + dataUrl + '">' + menuName + ' <i class="fa fa-times-circle"></i></a>';
             $('.J_menuTab').removeClass('active');
 
-            // 添加选项卡对应的iframe
+            // New选项卡对应的iframe
             var str1 = '<iframe class="J_iframe" name="iframe' + dataIndex + '" width="100%" height="100%" src="' + dataUrl + '" frameborder="0" data-id="' + dataUrl + '" seamless></iframe>';
             $('.J_mainContent').find('iframe.J_iframe').hide().parents('.J_mainContent').append(str1);
 
@@ -148,7 +148,7 @@ $(function () {
 //                //iframe加载完成后隐藏loading提示
 //                layer.close(loading);
 //            });
-            // 添加选项卡
+            // New选项卡
             $('.J_menuTabs .page-tabs-content').append(str);
             scrollToTab($('.J_menuTab.active'));
         }
@@ -162,10 +162,10 @@ $(function () {
         var closeTabId = $(this).parents('.J_menuTab').data('id');
         var currentWidth = $(this).parents('.J_menuTab').width();
 
-        // 当前元素处于活动状态
+        // 当前元素处于活动Status
         if ($(this).parents('.J_menuTab').hasClass('active')) {
 
-            // 当前元素后面有同辈元素，使后面的一个元素处于活动状态
+            // 当前元素后面有同辈元素，使后面的一个元素处于活动Status
             if ($(this).parents('.J_menuTab').next('.J_menuTab').size()) {
 
                 var activeId = $(this).parents('.J_menuTab').next('.J_menuTab:eq(0)').data('id');
@@ -197,7 +197,7 @@ $(function () {
                 });
             }
 
-            // 当前元素后面没有同辈元素，使当前元素的上一个元素处于活动状态
+            // 当前元素后面没有同辈元素，使当前元素的上一个元素处于活动Status
             if ($(this).parents('.J_menuTab').prev('.J_menuTab').size()) {
                 var activeId = $(this).parents('.J_menuTab').prev('.J_menuTab:last').data('id');
                 $(this).parents('.J_menuTab').prev('.J_menuTab:last').addClass('active');
@@ -220,7 +220,7 @@ $(function () {
                 });
             }
         }
-        // 当前元素不处于活动状态
+        // 当前元素不处于活动Status
         else {
             //  移除当前选项卡
             $(this).parents('.J_menuTab').remove();

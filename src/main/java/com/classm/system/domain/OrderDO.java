@@ -10,176 +10,176 @@ import java.util.Date;
  * 
  * @author hw
  * @email hw@test.com
- * @date 2019-02-23 15:32:24
+ * @date 2019-02-26 20:12:43
  */
 public class OrderDO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	//自增ID
+	//ID
 	private Integer id;
-	//订单ID
+	//Order ID
 	private String orderId;
-	//用户ID
+	//User ID
 	private Integer userId;
-	//商品ID
+	//Goods ID
 	private String goodsId;
-	//租赁开始日期
+	//Rental Start Date
 	private Date rentStartDay;
-	//租赁结束日期
+	//Rental End Date
 	private Date rentEndDay;
-	//商品日租金
+	//Daily Fee
 	private Float dailyFee;
-	//服务费
+	//Plaform Service
 	private Float serviceFee;
-	//总费用
+	//Total Fee
 	private Float totalFee;
-	//支付类型
+	//Pay Type
 	private String payType;
-	//支付状态0: unpay; 1:paying; 99: paied
+	//Pay Status0: unpay; 1:paying; 99: paied
 	private Integer payStatus;
-	//审核状态：0:unaudit; 99: audited
+	//Audit Status：0:unaudit; 99: audited
 	private Integer auditStatus;
 
 	/**
-	 * 设置：自增ID
+	 *  Set: ID
 	 */
 	public void setId(Integer id) {
 		this.id = id;
 	}
 	/**
-	 * 获取：自增ID
+	 * Get: ：ID
 	 */
 	public Integer getId() {
 		return id;
 	}
 	/**
-	 * 设置：订单ID
+	 *  Set: Order ID
 	 */
 	public void setOrderId(String orderId) {
 		this.orderId = orderId;
 	}
 	/**
-	 * 获取：订单ID
+	 * Get: ：Order ID
 	 */
 	public String getOrderId() {
 		return orderId;
 	}
 	/**
-	 * 设置：用户ID
+	 *  Set: User ID
 	 */
 	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}
 	/**
-	 * 获取：用户ID
+	 * Get: ：User ID
 	 */
 	public Integer getUserId() {
 		return userId;
 	}
 	/**
-	 * 设置：商品ID
+	 *  Set: Goods ID
 	 */
 	public void setGoodsId(String goodsId) {
 		this.goodsId = goodsId;
 	}
 	/**
-	 * 获取：商品ID
+	 * Get: ：Goods ID
 	 */
 	public String getGoodsId() {
 		return goodsId;
 	}
 	/**
-	 * 设置：租赁开始日期
+	 *  Set: Rental Start Date
 	 */
 	public void setRentStartDay(Date rentStartDay) {
 		this.rentStartDay = rentStartDay;
 	}
 	/**
-	 * 获取：租赁开始日期
+	 * Get: ：Rental Start Date
 	 */
 	public Date getRentStartDay() {
 		return rentStartDay;
 	}
 	/**
-	 * 设置：租赁结束日期
+	 *  Set: Rental End Date
 	 */
 	public void setRentEndDay(Date rentEndDay) {
 		this.rentEndDay = rentEndDay;
 	}
 	/**
-	 * 获取：租赁结束日期
+	 * Get: ：Rental End Date
 	 */
 	public Date getRentEndDay() {
 		return rentEndDay;
 	}
 	/**
-	 * 设置：商品日租金
+	 *  Set: Daily Fee
 	 */
 	public void setDailyFee(Float dailyFee) {
 		this.dailyFee = dailyFee;
 	}
 	/**
-	 * 获取：商品日租金
+	 * Get: ：Daily Fee
 	 */
 	public Float getDailyFee() {
 		return dailyFee;
 	}
 	/**
-	 * 设置：服务费
+	 *  Set: Plaform Service
 	 */
 	public void setServiceFee(Float serviceFee) {
 		this.serviceFee = serviceFee;
 	}
 	/**
-	 * 获取：服务费
+	 * Get: ：Plaform Service
 	 */
 	public Float getServiceFee() {
 		return serviceFee;
 	}
 	/**
-	 * 设置：总费用
+	 *  Set: Total Fee
 	 */
 	public void setTotalFee(Float totalFee) {
 		this.totalFee = totalFee;
 	}
 	/**
-	 * 获取：总费用
+	 * Get: ：Total Fee
 	 */
 	public Float getTotalFee() {
 		return totalFee;
 	}
 	/**
-	 * 设置：支付类型
+	 *  Set: Pay Type
 	 */
 	public void setPayType(String payType) {
 		this.payType = payType;
 	}
 	/**
-	 * 获取：支付类型
+	 * Get: ：Pay Type
 	 */
 	public String getPayType() {
 		return payType;
 	}
 	/**
-	 * 设置：支付状态0: unpay; 1:paying; 99: paied
+	 *  Set: Pay Status0: unpay; 1:paying; 99: paied
 	 */
 	public void setPayStatus(Integer payStatus) {
 		this.payStatus = payStatus;
 	}
 	/**
-	 * 获取：支付状态0: unpay; 1:paying; 99: paied
+	 * Get: ：Pay Status0: unpay; 1:paying; 99: paied
 	 */
 	public Integer getPayStatus() {
 		return payStatus;
 	}
 	/**
-	 * 设置：审核状态：0:unaudit; 99: audited
+	 *  Set: Audit Status：0:unaudit; 99: audited
 	 */
 	public void setAuditStatus(Integer auditStatus) {
 		this.auditStatus = auditStatus;
 	}
 	/**
-	 * 获取：审核状态：0:unaudit; 99: audited
+	 * Get: ：Audit Status：0:unaudit; 99: audited
 	 */
 	public Integer getAuditStatus() {
 		return auditStatus;

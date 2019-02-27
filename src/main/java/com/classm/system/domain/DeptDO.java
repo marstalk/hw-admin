@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 
 /**
- * 部门管理
+ * Department管理
  * 
  * @author
  * @email
@@ -16,71 +16,71 @@ public class DeptDO implements Serializable {
 	
 	//
 	private Long deptId;
-	//上级部门ID，一级部门为0
+	//上级DepartmentID，一级Department为0
 	private Long parentId;
-	//部门名称
+	//Department名称
 	private String name;
 	//排序
 	private Integer orderNum;
-	//是否删除  -1：已删除  0：正常
+	//是否Delete  -1：已Delete  0：Normal
 	private Integer delFlag;
 
 	/**
-	 * 设置：
+	 *  Set:
 	 */
 	public void setDeptId(Long deptId) {
 		this.deptId = deptId;
 	}
 	/**
-	 * 获取：
+	 * Get: ：
 	 */
 	public Long getDeptId() {
 		return deptId;
 	}
 	/**
-	 * 设置：上级部门ID，一级部门为0
+	 *  Set: 上级DepartmentID，一级Department为0
 	 */
 	public void setParentId(Long parentId) {
 		this.parentId = parentId;
 	}
 	/**
-	 * 获取：上级部门ID，一级部门为0
+	 * Get: ：上级DepartmentID，一级Department为0
 	 */
 	public Long getParentId() {
 		return parentId;
 	}
 	/**
-	 * 设置：部门名称
+	 *  Set: Department名称
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 	/**
-	 * 获取：部门名称
+	 * Get: ：Department名称
 	 */
 	public String getName() {
 		return name;
 	}
 	/**
-	 * 设置：排序
+	 *  Set: 排序
 	 */
 	public void setOrderNum(Integer orderNum) {
 		this.orderNum = orderNum;
 	}
 	/**
-	 * 获取：排序
+	 * Get: ：排序
 	 */
 	public Integer getOrderNum() {
 		return orderNum;
 	}
 	/**
-	 * 设置：是否删除  -1：已删除  0：正常
+	 *  Set: 是否Delete  -1：已Delete  0：Normal
 	 */
 	public void setDelFlag(Integer delFlag) {
 		this.delFlag = delFlag;
 	}
 	/**
-	 * 获取：是否删除  -1：已删除  0：正常
+	 * Get: ：是否Delete  -1：已Delete  0：Normal
 	 */
 	public Integer getDelFlag() {
 		return delFlag;

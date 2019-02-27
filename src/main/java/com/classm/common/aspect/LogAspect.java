@@ -44,7 +44,7 @@ public class LogAspect {
         Object result = point.proceed();
         // 执行时长(毫秒)
         long time = System.currentTimeMillis() - beginTime;
-        //异步保存日志
+        //异步Save日志
         saveLog(point, time);
         return result;
     }
@@ -70,11 +70,11 @@ public class LogAspect {
         } catch (Exception e) {
 
         }
-        // 获取request
+        // Get: request
         HttpServletRequest request = HttpContextUtils.getHttpServletRequest();
         // 设置IPlink
         sysLog.setIp(IPUtils.getIpAddr(request));
-        // 用户名
+        //  UserName
         UserDO currUser = ShiroUtils.getUser();
         if (null == currUser) {
             if (null != sysLog.getParams()) {
@@ -82,7 +82,7 @@ public class LogAspect {
                 sysLog.setUsername(sysLog.getParams());
             } else {
                 sysLog.setUserId(-1L);
-                sysLog.setUsername("获取用户Info为空");
+                sysLog.setUsername("Get: 用户Info为空");
             }
         } else {
             sysLog.setUserId(ShiroUtils.getUserId());
@@ -92,7 +92,7 @@ public class LogAspect {
         // 系统当前时间
         Date date = new Date();
         sysLog.setGmtCreate(date);
-        // 保存系统日志
+        // Save系统日志
         logService.save(sysLog);
     }
 }

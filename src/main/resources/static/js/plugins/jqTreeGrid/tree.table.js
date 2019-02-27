@@ -142,7 +142,7 @@
         },
         
         /**
-         * 获取选中行
+         * Get: 选中行
          */
         getSelectedRow: function() {
             return this.btInstance.bootstrapTreeTable('getSelections');

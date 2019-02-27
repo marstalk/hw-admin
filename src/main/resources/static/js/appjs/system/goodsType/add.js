@@ -21,7 +21,7 @@ function save() {
 			if (data.code == 0) {
 				parent.layer.msg("Success");
 				parent.reLoad();
-				var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
+				var index = parent.layer.getFrameIndex(window.name); // Get: 窗口索引
 				parent.layer.close(index);
 
 			} else {

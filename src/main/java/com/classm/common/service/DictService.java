@@ -34,20 +34,20 @@ public interface DictService {
 	String getName(String type,String value);
 
 	/**
-	 * 获取爱好列表
+	 * Get: 爱好列表
 	 * @return
      * @param userDO
 	 */
 	List<DictDO> getHobbyList(UserDO userDO);
 
 	/**
-	 * 获取性别列表
+	 * Get: 性别列表
  	 * @return
 	 */
 	List<DictDO> getSexList();
 
 	/**
-	 * 根据type获取数据
+	 * 根据typeGet: 数据
 	 * @param map
 	 * @return
 	 */

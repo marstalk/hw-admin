@@ -20,7 +20,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
   //外部接口
   ,table = {
     config: {
-      checkName: 'LAY_CHECKED' //是否选中状态的字段名
+      checkName: 'LAY_CHECKED' //是否选中Status的字段名
       ,indexName: 'LAY_TABLE_INDEX' //下标索引名
     } //全局配置项
     ,cache: {} //数据缓存
@@ -282,7 +282,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
         ,success: function(res){
           if(res[response.statusName] != response.statusCode){
             that.renderForm();
-            return that.layMain.html('<div class="'+ NONE +'">'+ (res[response.msgName] || '返回的数据状态异常') +'</div>');
+            return that.layMain.html('<div class="'+ NONE +'">'+ (res[response.msgName] || '返回的数据Status异常') +'</div>');
           }
           that.renderData(res, curr, res[response.countName]), sort();
           loadIndex && layer.close(loadIndex);
@@ -500,7 +500,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
     try {
       var field = field || th.data('field');
       
-      //如果欲执行的排序已在状态中，则不执行渲染
+      //如果欲执行的排序已在Status中，则不执行渲染
       if(that.sortKey && !pull){
         if(field === that.sortKey.field && type === that.sortKey.sort){
           return;
@@ -508,7 +508,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
       }
       
       var elemSort = that.layHeader.find('th .laytable-cell-'+ config.index +'-'+ field).find(ELEM_SORT);
-      that.layHeader.find('th').find(ELEM_SORT).removeAttr('lay-sort'); //清除其它标题排序状态
+      that.layHeader.find('th').find(ELEM_SORT).removeAttr('lay-sort'); //清除其它标题排序Status
       elemSort.attr('lay-sort', type || null);
       that.layFixed.find('th')
     } catch(e){
@@ -559,7 +559,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
     }
   };
   
-  //同步选中值状态
+  //同步选中值Status
   Class.prototype.setCheckData = function(index, checked){
     var that = this
     ,config = that.config
@@ -568,7 +568,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
     thisData[index][config.checkName] = checked;
   };
   
-  //同步全选button状态
+  //同步全选buttonStatus
   Class.prototype.syncCheckAll = function(){
     var that = this
     ,config = that.config
@@ -599,7 +599,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
     }
   };
   
-  //获取cssRule
+  //Get: cssRule
   Class.prototype.getCssRule = function(field, callback){
     var that = this
     ,style = that.elem.find('style')[0]
@@ -956,7 +956,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
       
       filter && othis.hide();
       
-      //获取表头数据
+      //Get: 表头数据
       othis.find('thead>tr').each(function(i){
         options.cols[i] = [];
         $(this).children().each(function(ii){
@@ -979,7 +979,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
         });
       });
 
-      //获取表体数据
+      //Get: 表体数据
       othis.find('tbody>tr').each(function(i1){
         var tr = $(this), row = {};
         //如果定义了字段名
@@ -1003,7 +1003,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
     return that;
   };
   
-  //表格选中状态
+  //表格选中Status
   table.checkStatus = function(id){
     var nums = 0
     ,arr = []

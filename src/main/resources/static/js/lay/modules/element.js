@@ -46,7 +46,7 @@ layui.define('jquery', function(exports){
     return this;
   };
   
-  //外部Tab删除
+  //外部TabDelete
   Element.prototype.tabDelete = function(filter, layid){
     var TITLE = '.layui-tab-title'
     ,tabElem = $('.layui-tab[lay-filter='+ filter +']')
@@ -103,7 +103,7 @@ layui.define('jquery', function(exports){
       });
     }
     
-    //Tab删除
+    //TabDelete
     ,tabDelete: function(e, othis){
       var li = othis || $(this).parent(), index = li.index();
       var parents = li.parents('.layui-tab').eq(0);
@@ -381,7 +381,7 @@ layui.define('jquery', function(exports){
             ,elemCont = othis.find('.layui-colla-content')
             ,isNone = elemCont.css('display') === 'none';
             
-            //初始状态
+            //初始Status
             elemTitle.find('.layui-colla-icon').remove();
             elemTitle.append('<i class="layui-icon layui-colla-icon">'+ (isNone ? '&#xe602;' : '&#xe61a;') +'</i>');
 

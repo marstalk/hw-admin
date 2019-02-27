@@ -32,7 +32,7 @@ public class UserOnline {
     private String userAgent;
 
     /**
-     * 在线状态
+     * 在线Status
      */
     private String status = "on_line";
 

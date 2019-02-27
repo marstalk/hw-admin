@@ -53,7 +53,7 @@ public class UserController extends BaseController {
 	}
 
 	@RequiresPermissions("sys:user:add")
-	@Log("添加用户")
+	@Log("New用户")
 	@GetMapping("/add")
 	String add(Model model) {
 		List<RoleDO> roles = roleService.list();
@@ -73,12 +73,12 @@ public class UserController extends BaseController {
 	}
 
 	@RequiresPermissions("sys:user:add")
-	@Log("保存用户")
+	@Log("Save用户")
 	@PostMapping("/save")
 	@ResponseBody
 	R save(UserDO user) {
 		if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		user.setPassword(MD5Utils.encrypt(user.getUsername(), user.getPassword()));
 		if (userService.save(user) > 0) {
@@ -93,7 +93,7 @@ public class UserController extends BaseController {
 	@ResponseBody
 	R update(UserDO user) {
 		if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		if (userService.update(user) > 0) {
 			return R.ok();
@@ -108,7 +108,7 @@ public class UserController extends BaseController {
 	@ResponseBody
 	R updatePeronal(UserDO user) {
 		if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		if (userService.updatePersonal(user) > 0) {
 			return R.ok();
@@ -118,12 +118,12 @@ public class UserController extends BaseController {
 
 
 	@RequiresPermissions("sys:user:remove")
-	@Log("删除用户")
+	@Log("Delete用户")
 	@PostMapping("/remove")
 	@ResponseBody
 	R remove(Long id) {
 		if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		if (userService.remove(id) > 0) {
 			return R.ok();
@@ -132,12 +132,12 @@ public class UserController extends BaseController {
 	}
 
 	@RequiresPermissions("sys:user:batchRemove")
-	@Log("批量删除用户")
+	@Log("批量Delete用户")
 	@PostMapping("/batchRemove")
 	@ResponseBody
 	R batchRemove(@RequestParam("ids[]") Long[] userIds) {
 		if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		int r = userService.batchremove(userIds);
 		if (r > 0) {
@@ -169,7 +169,7 @@ public class UserController extends BaseController {
 	@ResponseBody
 	R resetPwd(UserVO userVO) {
 		if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		try{
 			userService.resetPwd(userVO,getUser());
@@ -185,7 +185,7 @@ public class UserController extends BaseController {
 	@ResponseBody
 	R adminResetPwd(UserVO userVO) {
 		if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		try{
 			userService.adminResetPwd(userVO);
@@ -220,7 +220,7 @@ public class UserController extends BaseController {
 	@PostMapping("/uploadImg")
 	R uploadImg(@RequestParam("avatar_file") MultipartFile file, String avatar_data, HttpServletRequest request) {
 		if ("test".equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		Map<String, Object> result = new HashMap<>();
 		try {

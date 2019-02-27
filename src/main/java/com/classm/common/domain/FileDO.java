@@ -37,56 +37,56 @@ public class FileDO implements Serializable {
 
 
     /**
-     * 设置：
+     *  Set:
      */
     public void setId(Long id) {
         this.id = id;
     }
 
     /**
-     * 获取：
+     * Get: ：
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 设置：文件类型
+     *  Set: 文件类型
      */
     public void setType(Integer type) {
         this.type = type;
     }
 
     /**
-     * 获取：文件类型
+     * Get: ：文件类型
      */
     public Integer getType() {
         return type;
     }
 
     /**
-     * 设置：URLlink
+     *  Set: URLlink
      */
     public void setUrl(String url) {
         this.url = url;
     }
 
     /**
-     * 获取：URLlink
+     * Get: ：URLlink
      */
     public String getUrl() {
         return url;
     }
 
     /**
-     * 设置：创建时间
+     *  Set: 创建时间
      */
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
     /**
-     * 获取：创建时间
+     * Get: ：创建时间
      */
     public Date getCreateDate() {
         return createDate;

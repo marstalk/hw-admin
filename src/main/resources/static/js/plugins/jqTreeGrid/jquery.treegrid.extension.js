@@ -35,7 +35,7 @@
             var result = [];
             $.each(data, function(index, item) {
                 // 这里兼容几种常见Root节点写法
-                // 默认的几种判断
+                 认的几种判断
                 var _defaultRootFlag = item[options.parentCode] == '0'
                     || item[options.parentCode] == 0
                     || item[options.parentCode] == null
@@ -43,13 +43,13 @@
                 if (!item[options.parentCode] || (_root?(item[options.parentCode] == options.rootCodeValue):_defaultRootFlag)){
                     result.push(item);
                 }
-                // 添加一个默认属性，用来判断当前节点有没有被显示
+                // New一个默认属性，用来判断当前节点有没有被显示
                 item.isShow = false;
             });
             return result;
         };
         var j = 0;
-        // 递归获取子节点并且设置子节点
+        // 递归Get: 子节点并且设置子节点
         target.getChildNodes = function(data, parentNode, parentIndex, tbody) {
             $.each(data, function(i, item) {
                 if (item[options.parentCode] == parentNode[options.code]) {
@@ -117,10 +117,10 @@
             // 构造表体
             var tbody = $('<tbody class="treegrid-tbody"></tbody>');
             target.append(tbody);
-            // 添加加载loading
+            // New加载loading
             var _loading = '<tr><td colspan="'+options.columns.length+'"><div style="display: block;text-align: center;">正在努力地加载数据中，请稍候……</div></td></tr>'
             tbody.html(_loading);
-            // 默认高度
+             认高度
             if(options.height){
                 tbody.css("height",options.height);
             }

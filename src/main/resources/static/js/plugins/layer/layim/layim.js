@@ -335,7 +335,7 @@ xxim.popchatbox = function(othis){
     var node = xxim.node, dataId = othis.attr('data-id'), param = {
         id: dataId, //用户ID
         type: othis.attr('type'),
-        name: othis.find('.xxim_onename').text(),  //用户名
+        name: othis.find('.xxim_onename').text(),  // UserName
         face: othis.find('.xxim_oneface').attr('src'),  //用户头像
         href: 'profile.html?user=' + dataId //用户主页
     }, key = param.type + dataId;

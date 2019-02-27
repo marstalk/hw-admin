@@ -33,7 +33,7 @@ function save() {
 			if (data.code == 0) {
 				parent.layer.msg("Success");
 				parent.reLoad();
-				var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
+				var index = parent.layer.getFrameIndex(window.name); // Get: 窗口索引
 				parent.layer.close(index);
 
 			} else {
@@ -90,9 +90,9 @@ function validateRule() {
 				required : icon + "Please enter valid value"
 			},
 			username : {
-				required : icon + "请输入您的用户名",
-				minlength : icon + "用户名必须两个字符以上",
-				remote : icon + "用户名已经存在"
+				required : icon + "请输入您的 UserName",
+				minlength : icon + " UserName必须两个字符以上",
+				remote : icon + " UserName已经存在"
 			},
 			password : {
 				required : icon + "请输入您的密码",
@@ -111,7 +111,7 @@ function validateRule() {
 var openDept = function(){
 	layer.open({
 		type:2,
-		title:"选择部门",
+		title:"选择Department",
 		area : [ '300px', '450px' ],
 		content:"/system/sysDept/treeView"
 	})

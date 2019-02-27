@@ -207,7 +207,7 @@ $(function () {
         }
     });
 
-    // 默认主题
+     认主题
     $('.s-skin-0').click(function () {
         $("body").removeClass("skin-1");
         $("body").removeClass("skin-2");

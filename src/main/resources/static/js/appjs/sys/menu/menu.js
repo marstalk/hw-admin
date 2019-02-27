@@ -111,9 +111,9 @@ function add(pId) {
         type: 2,
         title: 'new menu',
         maxmin: true,
-        shadeClose: false, // 点击遮罩关闭层
+        shadeClose: false, //
         area: ['800px', '520px'],
-        content: prefix + '/add/' + pId // iframe的url
+        content: prefix + '/add/' + pId //
     });
 }
 
@@ -144,9 +144,9 @@ function edit(id) {
         type: 2,
         title: 'menu update',
         maxmin: true,
-        shadeClose: false, // 点击遮罩关闭层
+        shadeClose: false, //
         area: ['800px', '520px'],
-        content: prefix + '/edit/' + id // iframe的url
+        content: prefix + '/edit/' + id //
     });
 }
 

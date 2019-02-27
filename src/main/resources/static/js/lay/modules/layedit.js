@@ -131,7 +131,7 @@ layui.define(['layer', 'form'], function(exports){
     textarea.val(toLower(iframeWin[0].document.body.innerHTML));
   };
   
-  //获取编辑器选中内容
+  //Get: 编辑器选中内容
   Edit.prototype.getSelection = function(index){
     var iframeWin = getWin(index);
     if(!iframeWin[0]) return;
@@ -627,7 +627,7 @@ layui.define(['layer', 'form'], function(exports){
     ,strong: '<i class="layui-icon layedit-tool-b" title="加粗" lay-command="Bold" layedit-event="b"">&#xe62b;</i>'
     ,italic: '<i class="layui-icon layedit-tool-i" title="斜体" lay-command="italic" layedit-event="i"">&#xe644;</i>'
     ,underline: '<i class="layui-icon layedit-tool-u" title="下划线" lay-command="underline" layedit-event="u"">&#xe646;</i>'
-    ,del: '<i class="layui-icon layedit-tool-d" title="删除线" lay-command="strikeThrough" layedit-event="d"">&#xe64f;</i>'
+    ,del: '<i class="layui-icon layedit-tool-d" title="Delete线" lay-command="strikeThrough" layedit-event="d"">&#xe64f;</i>'
     
     ,'|': '<span class="layedit-tool-mid"></span>'
     

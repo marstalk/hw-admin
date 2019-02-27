@@ -10,148 +10,148 @@ import java.util.Date;
  * 
  * @author hw
  * @email hw@test.com
- * @date 2019-02-23 15:32:24
+ * @date 2019-02-26 20:12:42
  */
 public class GoodsDO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	//自增ID
+	//ID
 	private Integer id;
-	//商品ID
+	//Goods ID
 	private String goodsId;
-	//商品名称
+	//Goods Name
 	private String name;
-	//商品类型
+	//Type Name
 	private String typeName;
-	//商品类型ID
+	//Type ID
 	private Integer type;
-	//单日租金
+	//Rental Daily
 	private Float rentalcost;
-	//商品押金
+	//Deposit
 	private Float deposit;
-	//描述
+	//Description
 	private String desc;
-	//交易link
+	//Exchange Addr
 	private String addr;
-	//商品所有者ID
+	//Owner ID
 	private Integer owner;
 
 	/**
-	 * 设置：自增ID
+	 *  Set: ID
 	 */
 	public void setId(Integer id) {
 		this.id = id;
 	}
 	/**
-	 * 获取：自增ID
+	 * Get: ：ID
 	 */
 	public Integer getId() {
 		return id;
 	}
 	/**
-	 * 设置：商品ID
+	 *  Set: Goods ID
 	 */
 	public void setGoodsId(String goodsId) {
 		this.goodsId = goodsId;
 	}
 	/**
-	 * 获取：商品ID
+	 * Get: ：Goods ID
 	 */
 	public String getGoodsId() {
 		return goodsId;
 	}
 	/**
-	 * 设置：商品名称
+	 *  Set: Goods Name
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 	/**
-	 * 获取：商品名称
+	 * Get: ：Goods Name
 	 */
 	public String getName() {
 		return name;
 	}
 	/**
-	 * 设置：商品类型
+	 *  Set: Type Name
 	 */
 	public void setTypeName(String typeName) {
 		this.typeName = typeName;
 	}
 	/**
-	 * 获取：商品类型
+	 * Get: ：Type Name
 	 */
 	public String getTypeName() {
 		return typeName;
 	}
 	/**
-	 * 设置：商品类型ID
+	 *  Set: Type ID
 	 */
 	public void setType(Integer type) {
 		this.type = type;
 	}
 	/**
-	 * 获取：商品类型ID
+	 * Get: ：Type ID
 	 */
 	public Integer getType() {
 		return type;
 	}
 	/**
-	 * 设置：单日租金
+	 *  Set: Rental Daily
 	 */
 	public void setRentalcost(Float rentalcost) {
 		this.rentalcost = rentalcost;
 	}
 	/**
-	 * 获取：单日租金
+	 * Get: ：Rental Daily
 	 */
 	public Float getRentalcost() {
 		return rentalcost;
 	}
 	/**
-	 * 设置：商品押金
+	 *  Set: Deposit
 	 */
 	public void setDeposit(Float deposit) {
 		this.deposit = deposit;
 	}
 	/**
-	 * 获取：商品押金
+	 * Get: ：Deposit
 	 */
 	public Float getDeposit() {
 		return deposit;
 	}
 	/**
-	 * 设置：描述
+	 *  Set: Description
 	 */
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
 	/**
-	 * 获取：描述
+	 * Get: ：Description
 	 */
 	public String getDesc() {
 		return desc;
 	}
 	/**
-	 * 设置：交易link
+	 *  Set: Exchange Addr
 	 */
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
 	/**
-	 * 获取：交易link
+	 * Get: ：Exchange Addr
 	 */
 	public String getAddr() {
 		return addr;
 	}
 	/**
-	 * 设置：商品所有者ID
+	 *  Set: Owner ID
 	 */
 	public void setOwner(Integer owner) {
 		this.owner = owner;
 	}
 	/**
-	 * 获取：商品所有者ID
+	 * Get: ：Owner ID
 	 */
 	public Integer getOwner() {
 		return owner;

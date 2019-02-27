@@ -7,7 +7,7 @@ jQuery(function() {
         $queue = $('<ul class="filelist"></ul>')
             .appendTo( $wrap.find('.queueList') ),
 
-        // 状态栏，包括进度和控制button
+        // Status栏，包括进度和控制button
         $statusBar = $wrap.find('.statusBar'),
 
         // 文件总体选择Info。
@@ -22,10 +22,10 @@ jQuery(function() {
         // 总体进度条
         $progress = $statusBar.find('.progress').hide(),
 
-        // 添加的文件数量
+        // New的文件数量
         fileCount = 0,
 
-        // 添加的文件总大小
+        // New的文件总大小
         fileSize = 0,
 
         // 优化retina, 在retina下这个值是2
@@ -88,13 +88,13 @@ jQuery(function() {
         fileSingleSizeLimit: 1 * 1024 * 1024    // 50 M
     });
 
-    // 添加“添加文件”的button，
+    // New“New文件”的button，
     uploader.addButton({
         id: '#filePicker2',
-        label: '继续添加'
+        label: '继续New'
     });
 
-    // 当有文件添加进来时执行，负责view的创建
+    // 当有文件New进来时执行，负责view的创建
     function addFile( file ) {
         var $li = $( '<li id="' + file.id + '">' +
                 '<p class="title">' + file.name + '</p>' +
@@ -103,7 +103,7 @@ jQuery(function() {
                 '</li>' ),
 
             $btns = $('<div class="file-panel">' +
-                '<span class="cancel">删除</span>' +
+                '<span class="cancel">Delete</span>' +
                 '<span class="rotateRight">向右旋转</span>' +
                 '<span class="rotateLeft">向左旋转</span></div>').appendTo( $li ),
             $prgress = $li.find('p.progress span'),

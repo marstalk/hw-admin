@@ -57,12 +57,12 @@ $.jgrid.regional["cn"] = {
 		resetTitle : "Reset Search Value"
     },
     edit : {
-        addCaption: "添加记录",
+        addCaption: "New记录",
         editCaption: "编辑记录",
         bSubmit: "Submit",
         bCancel: "取消",
         bClose: "关闭",
-        saveData: "数据已改变，是否保存？",
+        saveData: "数据已改变，是否Save？",
         bYes : "是",
         bNo : "否",
         bExit : "取消",
@@ -87,7 +87,7 @@ $.jgrid.regional["cn"] = {
     },
     del : {
         caption: "Del",
-        msg: "删除所选记录？",
+        msg: "Delete所选记录？",
         bSubmit: "Del",
         bCancel: "取消"
     },
@@ -95,9 +95,9 @@ $.jgrid.regional["cn"] = {
         edittext: "",
         edittitle: "编辑所选记录",
         addtext:"",
-        addtitle: "添加新记录",
+        addtitle: "New新记录",
         deltext: "",
-        deltitle: "删除所选记录",
+        deltitle: "Delete所选记录",
         searchtext: "",
         searchtitle: "查找",
         refreshtext: "",

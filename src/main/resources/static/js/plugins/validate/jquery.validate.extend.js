@@ -16,12 +16,12 @@ $(document).ready(function(){
 		var tel = /^(0\d{2,3}-)?\d{7,8}$/g;//区号3,4位,号码7,8位
 		return this.optional(element) || (tel.test(value));
 	},"请填写正确的座机号码");
-	//姓名校验
+	//Name校验
 	// jQuery.validator.addMethod("isName",function(value,element){
 	// 	var name=/^[\u4e00-\u9fa5]{2,6}$/;
 	// 	return this.optional(element) || (name.test(value));
-	// },"姓名只能用汉字,长度2-4位");
-	//校验用户名
+	// },"Name只能用汉字,长度2-4位");
+	//校验 UserName
 	jQuery.validator.addMethod("isUserName",function(value,element){
 		var userName=/^[a-zA-Z0-9]{2,13}$/;
 		return this.optional(element) || (userName).test(value);
@@ -80,7 +80,7 @@ $(document).ready(function(){
 		messages:{
 			name:{
 				required:"please enter name",
-				// isName:"姓名只能为汉字"
+				// isName:"Name只能为汉字"
 			},
 			sex:{
 				required:"please enter gender"
@@ -117,7 +117,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	//校验修改密码表单
+	//校验Update密码表单
 	$("#modifyPwd").validate({
 		onfocusout: function(element) { $(element).valid()},
 		 debug:false, //表示校验通过后是否直接Submit表单

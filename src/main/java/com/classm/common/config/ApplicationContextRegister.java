@@ -31,7 +31,7 @@ public class ApplicationContextRegister implements ApplicationContextAware {
     }
 
     /**
-     * 获取容器
+     * Get: 容器
      * @return
      */
     public static ApplicationContext getApplicationContext() {
@@ -39,7 +39,7 @@ public class ApplicationContextRegister implements ApplicationContextAware {
     }
 
     /**
-     * 获取容器对象
+     * Get: 容器对象
      * @param type
      * @param <T>
      * @return

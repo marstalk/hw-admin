@@ -23,7 +23,7 @@ public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
   
     /** 
     * 覆盖getParameter方法，将参数名和参数值都做xss过滤。<br/> 
-    * 如果需要获得原始的值，则通过super.getParameterValues(name)来获取<br/> 
+    * 如果需要获得原始的值，则通过super.getParameterValues(name)来Get: <br/>
     * getParameterNames,getParameterValues和getParameterMap也可能需要覆盖 
     */  
     @Override  
@@ -54,7 +54,7 @@ public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
   
     /** 
     * 覆盖getHeader方法，将参数名和参数值都做xss过滤。<br/> 
-    * 如果需要获得原始的值，则通过super.getHeaders(name)来获取<br/> 
+    * 如果需要获得原始的值，则通过super.getHeaders(name)来Get: <br/>
     * getHeaderNames 也可能需要覆盖 
     */  
     @Override  
@@ -68,7 +68,7 @@ public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
     }  
   
     /** 
-    * 获取最原始的request 
+    * Get: 最原始的request
     * 
     * @return 
     */  
@@ -77,7 +77,7 @@ public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
     }  
   
     /** 
-    * 获取最原始的request的静态方法 
+    * Get: 最原始的request的静态方法
     * 
     * @return 
     */  

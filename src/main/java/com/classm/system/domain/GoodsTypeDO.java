@@ -10,36 +10,36 @@ import java.util.Date;
  * 
  * @author hw
  * @email hw@test.com
- * @date 2019-02-23 15:32:24
+ * @date 2019-02-26 20:12:43
  */
 public class GoodsTypeDO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	//商品类型ID
+	//ID
 	private Integer id;
-	//商品类型
+	//Name
 	private String name;
 
 	/**
-	 * 设置：商品类型ID
+	 *  Set: ID
 	 */
 	public void setId(Integer id) {
 		this.id = id;
 	}
 	/**
-	 * 获取：商品类型ID
+	 * Get: ：ID
 	 */
 	public Integer getId() {
 		return id;
 	}
 	/**
-	 * 设置：商品类型
+	 *  Set: Name
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 	/**
-	 * 获取：商品类型
+	 * Get: ：Name
 	 */
 	public String getName() {
 		return name;

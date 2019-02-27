@@ -32,7 +32,7 @@ public class WebLogAspect {
         // 记录下请求内容
         logger.info("请求link : " + request.getRequestURL().toString());
         logger.info("HTTP METHOD : " + request.getMethod());
-        // 获取真实的iplink
+        // Get: 真实的iplink
         //logger.info("IP : " + IPAddressUtil.getClientIpAddress(request));
         logger.info("CLASS_METHOD : " + joinPoint.getSignature().getDeclaringTypeName() + "."
                 + joinPoint.getSignature().getName());

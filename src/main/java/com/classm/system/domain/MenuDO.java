@@ -23,144 +23,144 @@ public class MenuDO implements Serializable {
 	private Integer orderNum;
 	// 创建时间
 	private Date gmtCreate;
-	// 修改时间
+	// Update时间
 	private Date gmtModified;
 
 	/**
-	 * 设置：
+	 *  Set:
 	 */
 	public void setMenuId(Long menuId) {
 		this.menuId = menuId;
 	}
 
 	/**
-	 * 获取：
+	 * Get: ：
 	 */
 	public Long getMenuId() {
 		return menuId;
 	}
 
 	/**
-	 * 设置：父menuID，一级menu为0
+	 *  Set: 父menuID，一级menu为0
 	 */
 	public void setParentId(Long parentId) {
 		this.parentId = parentId;
 	}
 
 	/**
-	 * 获取：父menuID，一级menu为0
+	 * Get: ：父menuID，一级menu为0
 	 */
 	public Long getParentId() {
 		return parentId;
 	}
 
 	/**
-	 * 设置：menu名称
+	 *  Set: menu名称
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
 	/**
-	 * 获取：menu名称
+	 * Get: ：menu名称
 	 */
 	public String getName() {
 		return name;
 	}
 
 	/**
-	 * 设置：menuURL
+	 *  Set: menuURL
 	 */
 	public void setUrl(String url) {
 		this.url = url;
 	}
 
 	/**
-	 * 获取：menuURL
+	 * Get: ：menuURL
 	 */
 	public String getUrl() {
 		return url;
 	}
 
 	/**
-	 * 设置：授权(多个用逗号分隔，如：user:list,user:create)
+	 *  Set: 授权(多个用逗号分隔，如：user:list,user:create)
 	 */
 	public void setPerms(String perms) {
 		this.perms = perms;
 	}
 
 	/**
-	 * 获取：授权(多个用逗号分隔，如：user:list,user:create)
+	 * Get: ：授权(多个用逗号分隔，如：user:list,user:create)
 	 */
 	public String getPerms() {
 		return perms;
 	}
 
 	/**
-	 * 设置：类型 0：directory 1：menu 2：button
+	 *  Set: 类型 0：directory 1：menu 2：button
 	 */
 	public void setType(Integer type) {
 		this.type = type;
 	}
 
 	/**
-	 * 获取：类型 0：directory 1：menu 2：button
+	 * Get: ：类型 0：directory 1：menu 2：button
 	 */
 	public Integer getType() {
 		return type;
 	}
 
 	/**
-	 * 设置：menu图标
+	 *  Set: menu图标
 	 */
 	public void setIcon(String icon) {
 		this.icon = icon;
 	}
 
 	/**
-	 * 获取：menu图标
+	 * Get: ：menu图标
 	 */
 	public String getIcon() {
 		return icon;
 	}
 
 	/**
-	 * 设置：排序
+	 *  Set: 排序
 	 */
 	public void setOrderNum(Integer orderNum) {
 		this.orderNum = orderNum;
 	}
 
 	/**
-	 * 获取：排序
+	 * Get: ：排序
 	 */
 	public Integer getOrderNum() {
 		return orderNum;
 	}
 
 	/**
-	 * 设置：创建时间
+	 *  Set: 创建时间
 	 */
 	public void setGmtCreate(Date gmtCreate) {
 		this.gmtCreate = gmtCreate;
 	}
 
 	/**
-	 * 获取：创建时间
+	 * Get: ：创建时间
 	 */
 	public Date getGmtCreate() {
 		return gmtCreate;
 	}
 
 	/**
-	 * 设置：修改时间
+	 *  Set: Update时间
 	 */
 	public void setGmtModified(Date gmtModified) {
 		this.gmtModified = gmtModified;
 	}
 
 	/**
-	 * 获取：修改时间
+	 * Get: ：Update时间
 	 */
 	public Date getGmtModified() {
 		return gmtModified;

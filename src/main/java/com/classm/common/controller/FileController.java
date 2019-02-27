@@ -78,7 +78,7 @@ public class FileController extends BaseController {
 	}
 
 	/**
-	 * 保存
+	 * Save
 	 */
 	@ResponseBody
 	@PostMapping("/save")
@@ -91,7 +91,7 @@ public class FileController extends BaseController {
 	}
 
 	/**
-	 * 修改
+	 * Update
 	 */
 	@RequestMapping("/update")
 	@RequiresPermissions("common:update")
@@ -102,20 +102,20 @@ public class FileController extends BaseController {
 	}
 
 	/**
-	 * 删除
+	 * Delete
 	 */
 	@PostMapping("/remove")
 	@ResponseBody
 	// @RequiresPermissions("common:remove")
 	public R remove(Long id, HttpServletRequest request) {
 		if ("test".equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		String fileName = bootdoConfig.getUploadPath() + sysFileService.get(id).getUrl().replace("/files/", "");
 		if (sysFileService.remove(id) > 0) {
 			boolean b = FileUtil.deleteFile(fileName);
 			if (!b) {
-				return R.error("数据库记录删除成功，文件删除失败");
+				return R.error("数据库记录Delete成功，文件Delete失败");
 			}
 			return R.ok();
 		} else {
@@ -124,14 +124,14 @@ public class FileController extends BaseController {
 	}
 
 	/**
-	 * 删除
+	 * Delete
 	 */
 	@PostMapping("/batchRemove")
 	@ResponseBody
 	@RequiresPermissions("common:remove")
 	public R remove(@RequestParam("ids[]") Long[] ids) {
 		if ("test".equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		sysFileService.batchRemove(ids);
 		return R.ok();
@@ -141,7 +141,7 @@ public class FileController extends BaseController {
 	@PostMapping("/upload")
 	R upload(@RequestParam("file") MultipartFile file, HttpServletRequest request) {
 		if ("test".equals(getUsername())) {
-			return R.error(1, "演示系统不允许修改,完整体验请部署程序");
+			return R.error(1, "演示系统不允许Update,完整体验请部署程序");
 		}
 		String fileName = file.getOriginalFilename();
 		fileName = FileUtil.renameToUUID(fileName);

@@ -9,7 +9,7 @@
 			<div class="col-sm-3">
 				<div class="ibox ibox-body">
 					<div class="ibox-title">
-						<h5>选择部门</h5>
+						<h5>选择Department</h5>
 					</div>
 					<div class="ibox-content">
 						<div id="jstree"></div>
@@ -23,11 +23,11 @@
 							<div class="columns pull-left">
 								<button shiro:hasPermission="sys:user:add" type="button"
 									class="btn  btn-primary" onclick="add()">
-									<i class="fa fa-plus hidden" aria-hidden="true"></i>添加
+									<i class="fa fa-plus hidden" aria-hidden="true"></i>New
 								</button>
 								<button shiro:hasPermission="sys:user:batchRemove" type="button"
 									class="btn  btn-danger" onclick="batchRemove()">
-									<i class="fa fa-trash hidden" aria-hidden="true"></i>删除
+									<i class="fa fa-trash hidden" aria-hidden="true"></i>Delete
 								</button>
 							</div>
 							<div class="columns pull-right">
@@ -36,7 +36,7 @@
 
 							<div class="columns pull-right col-md-2 nopadding">
 								<input id="searchName" type="text" class="form-control"
-									placeholder="姓名">
+									placeholder="Name">
 							</div>
 						</div>
 						<table id="exampleTable" data-mobile-responsive="true">
